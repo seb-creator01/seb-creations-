@@ -34,10 +34,9 @@
       width: 100%;
     }
     img.profile-photo {
-      width: 150px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 20px;
+      width: 200px;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
     a.contact-link {
       color: #007bff;
@@ -50,16 +49,17 @@
     }
     input[type="email"] {
       padding: 8px;
-      width: 70%;
+      width: 80%;
+      max-width: 300px;
+margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 4px;
-      margin-right: 10px;
     }
-button {
-      padding: 9px 15px;
+    button {
+      padding: 10px 20px;
       background-color: #007bff;
-      color: white;
       border: none;
+      color: white;
       border-radius: 4px;
       cursor: pointer;
     }
@@ -72,10 +72,9 @@ button {
   <header>
     <h1>Welcome to My Website</h1>
   </header>
-
   <main>
-    <img src="profile.jpg" alt="My Photo" class="profile-photo" />
     <h2>About Me</h2>
+    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/refs/heads/main/IMG_20250720_214611_200.jpg" alt="My Photo" class="profile-photo" />
     <p>This is a simple website created to show who I am and what I do.</p>
     <p>Feel free to explore and learn more!</p>
 
@@ -88,16 +87,16 @@ button {
       <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" class="contact-link">Facebook</a>
     </p>
 
-    <h3>Subscribe for Updates</h3>
-    <form action="https://formspree.io/f/xnnzjbvz" method="post">
-      <label for="email">Your Email:</label><br />
-      <input type="email" name="email" id="email" placeholder="Enter your email" required />
+    <h3>Send me an Email</h3>
+    <form action="https://formspree.io/f/xnnzjbvz" method="POST">
+<label for="email">Your Email</label><br />
+      <input type="email" id="email" name="Email" required placeholder="Enter your email" /><br />
       <button type="submit">Submit</button>
     </form>
   </main>
-<footer>
+  <footer>
     <p>© 2025 My Simple Website</p>
     <p><a href="https://seb-creator01.github.io/My-first-website-/" target="_blank" style="color:white; text-decoration:underline;">Editing & Design Site</a></p>
   </footer>
 </body>
-  </html>
+    </html>
