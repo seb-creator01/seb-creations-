@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SebCreation</title>
+  <title>My Simple Website</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -29,58 +29,75 @@
       background: #333;
       color: white;
       padding: 1em 0;
-      position: relative;
+      position: fixed;
       bottom: 0;
       width: 100%;
     }
-    input, button {
-      padding: 0.5em;
-      margin-top: 0.5em;
-      width: 80%;
+    img.profile-photo {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+    a.contact-link {
+      color: #007bff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input[type="email"] {
+      padding: 8px;
+      width: 70%;
       border: 1px solid #ccc;
       border-radius: 4px;
+      margin-right: 10px;
     }
-    button {
-      background: #007bff;
+button {
+      padding: 9px 15px;
+      background-color: #007bff;
       color: white;
       border: none;
+      border-radius: 4px;
       cursor: pointer;
     }
-    a {
-      text-decoration: none;
-      margin: 0 5px;
+    button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to SebCreation</h1>
+    <h1>Welcome to My Website</h1>
   </header>
+
   <main>
+    <img src="profile.jpg" alt="My Photo" class="profile-photo" />
     <h2>About Me</h2>
-<p>This is a simple website created to show who I am and what I do.</p>
+    <p>This is a simple website created to show who I am and what I do.</p>
     <p>Feel free to explore and learn more!</p>
 
-    <h3>Contact Me</h3>
-    <form action="https://formspree.io/f/xnnzjbvz" method="POST">
-      <label for="email">Your Email</label><br>
-      <input type="email" name="email" id="email" required><br>
-      <label for="message">Message</label><br>
-      <input type="text" name="message" id="message" required><br>
-      <button type="submit">Send</button>
-    </form>
+    <h3>Check out my Editing & Design site:</h3>
+    <p><a href="https://seb-creator01.github.io/My-first-website-/" target="_blank" class="contact-link">Visit Editing & Design</a></p>
 
-    <h3>Also reach me via:</h3>
+    <h3>Contact Me</h3>
     <p>
-      <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" style="color:#1877F2;">Facebook</a> |
-      <a href="https://wa.me/2348053103234" target="_blank" style="color:#25D366;">WhatsApp</a>
+      <a href="https://wa.me/2348053103234" target="_blank" class="contact-link">WhatsApp</a> | 
+      <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" class="contact-link">Facebook</a>
     </p>
 
-    <h3>Check out my Editing & Design site:</h3>
-    <p><a href="https://seb-creator01.github.io/My-first-website-/" target="_blank" style="color:#007bff;">Visit Editing & Design</a></p>
+    <h3>Subscribe for Updates</h3>
+    <form action="https://formspree.io/f/xnnzjbvz" method="post">
+      <label for="email">Your Email:</label><br />
+      <input type="email" name="email" id="email" placeholder="Enter your email" required />
+      <button type="submit">Submit</button>
+    </form>
   </main>
-  <footer>
-    <p>© 2025 SebCreation</p>
+<footer>
+    <p>© 2025 My Simple Website</p>
+    <p><a href="https://seb-creator01.github.io/My-first-website-/" target="_blank" style="color:white; text-decoration:underline;">Editing & Design Site</a></p>
   </footer>
 </body>
   </html>
