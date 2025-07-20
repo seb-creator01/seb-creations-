@@ -1,23 +1,3 @@
 # My-first-website-
 Read me file
-html
-<main>
-  <h2>About Me</h2>
-  <p>This is a simple website created to show who I am and what I do.</p>
-  <p>Feel free to explore and learn more!</p>
 
-  <h3>Check out my Editing & Design site:</h3>
-  <p><a href="https://seb-creator01.github.io/My-first-website-/" target="_blank" style="color:#007bff; text-decoration:none;">Visit Editing & Design</a></p>
-</main>
-```
-
-https://seb-creator01.github.io/My-first-website-/
-
----
-
-
-```html
-<footer>
-  <p>© 2025 My Simple Website</p>
-  <p><a href="https://seb-creator01.github.io/My-first-website-/" target="_blank" style="color:white; text-decoration:underline;">Editing & Design Site</a></p>
-</footer>
