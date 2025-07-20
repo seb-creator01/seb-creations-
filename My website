@@ -1,0 +1,58 @@
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Simple Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      padding: 1em 0;
+    }
+    main {
+      margin: 2em auto;
+      max-width: 600px;
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    footer {
+      background: #333;
+      color: white;
+      padding: 1em 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+  <main>
+    <h2>About Me</h2>
+    <p>This is a simple website created to show who I am and what I do.</p>
+    <p>Feel free to explore and learn more!</p>
+  </main>
+  <footer>
+    <p>© 2025 My Simple Website</p>
+  </footer>
+</body>
+</html>
+```
+
+
+1. Create a 
