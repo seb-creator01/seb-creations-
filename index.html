@@ -25,28 +25,55 @@
       border-radius: 8px;
       box-shadow: 0 0 10px #ccc;
     }
-    img.profile {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1em;
-    }
-    input, button {
-      padding: 0.5em;
-      margin: 0.5em 0;
-      width: 90%;
-      max-width: 300px;
-    }
     footer {
       background: #333;
       color: white;
       padding: 1em 0;
-      margin-top: 2em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
-    a {
+    img.profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1em;
+    }
+    a.contact-link {
       color: #007bff;
       text-decoration: none;
+      margin: 0 0.5em;
+      font-weight: bold;
+    }
+    a.contact-link:hover {
+      text-decoration: underline;
+    }
+    form {
+      margin-top: 2em;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin: 0.5em 0 0.2em;
+    }
+    input[type="email"] {
+width: 100%;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.7em 1.5em;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
     }
   </style>
 </head>
@@ -54,36 +81,36 @@
   <header>
     <h1>Welcome to My Website</h1>
   </header>
-
   <main>
-<img class="profile" src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo">
-    
+    <img class="profile-photo" src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" />
     <h2>About Me</h2>
     <p>This is a simple website created to show who I am and what I do.</p>
+    <p>Feel free to explore and learn more!</p>
 
-    <h2>My Services</h2>
-    <ul style="text-align: left;">
+    <h3>Services I Offer:</h3>
+    <ul style="text-align:left;">
       <li>Product background removal</li>
       <li>Talking photo creation</li>
-      <li>Voice notes (male & female)</li>
-      <li>PDF file creation</li>
-      <li>Removing unwanted photo objects/backgrounds</li>
+      <li>Voice note creation (male and female)</li>
+      <li>Creating PDF files</li>
+      <li>Removal of unwanted objects from photos and backgrounds</li>
     </ul>
 
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xnnzjbvz" method="POST">
-      <input type="email" name="email" placeholder="Your Email" required><br>
-      <button type="submit">Send Message</button>
-    </form>
-
+    <h3>Contact Me</h3>
     <p>
-      <a href="https://wa.me/2348053103234" target="_blank">Message me on WhatsApp</a><br>
-      <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank">Visit my Facebook</a>
+      <a href="https://wa.me/2348053103234" target="_blank" class="contact-link">WhatsApp</a> |
+<a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" class="contact-link">Facebook</a>
     </p>
-  </main>
 
+    <form action="https://formspree.io/f/xnnzjbvz" method="post">
+      <label for="email">Your Email</label>
+      <input name="Email" id="email" type="email" placeholder="Enter your email" required />
+      <button type="submit">Submit</button>
+    </form>
+  </main>
   <footer>
     <p>© 2025 My Simple Website</p>
+    <p><a href="https://seb-creator01.github.io/My-first-website-/" target="_blank" style="color:white; text-decoration:underline;">Editing & Design Site</a></p>
   </footer>
 </body>
-</html>
+  </html>
