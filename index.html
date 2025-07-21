@@ -24,67 +24,29 @@
       padding: 2em;
       border-radius: 8px;
       box-shadow: 0 0 10px #ccc;
-      text-align: left;
     }
-    h1, h2, h3 {
-      text-align: center;
+    img.profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1em;
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
+    input, button {
+      padding: 0.5em;
+      margin: 0.5em 0;
+      width: 90%;
+      max-width: 300px;
     }
     footer {
       background: #333;
       color: white;
       padding: 1em 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
+      margin-top: 2em;
     }
-    label {
-      display: block;
-      margin-top: 1em;
-    }
-    input[type="email"] {
-      width: 100%;
-      padding: 8px;
-      margin-top: 0.5em;
-      box-sizing: border-box;
-    }
-    button {
-      margin-top: 1em;
-      padding: 10px 20px;
-background-color: #007bff;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    .profile-photo {
-      display: block;
-      margin: 1em auto;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #007bff;
-    }
-    .contact-links {
-      margin-top: 1em;
-      text-align: center;
-    }
-    .contact-links a {
-      margin: 0 10px;
+    a {
       color: #007bff;
       text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-links a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -92,44 +54,36 @@ background-color: #007bff;
   <header>
     <h1>Welcome to My Website</h1>
   </header>
+
   <main>
-    <!-- About Me Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile-photo" />
-      <p>This is a simple website created to show who I am and what I do.</p>
-      <p>Feel free to explore and learn more!</p>
-    </section>
+<img class="profile" src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo">
+    
+    <h2>About Me</h2>
+    <p>This is a simple website created to show who I am and what I do.</p>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Services I Offer</h2>
-      <ul>
-        <li>Product Background Removal</li>
-<li>Talking Photo Creation</li>
-        <li>Voice Note Creation for Male and Female</li>
-        <li>PDF File Creation</li>
-        <li>Removal of Unwanted Objects from Photos and Backgrounds</li>
-      </ul>
-    </section>
+    <h2>My Services</h2>
+    <ul style="text-align: left;">
+      <li>Product background removal</li>
+      <li>Talking photo creation</li>
+      <li>Voice notes (male & female)</li>
+      <li>PDF file creation</li>
+      <li>Removing unwanted photo objects/backgrounds</li>
+    </ul>
 
-    <!-- Contact Form Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/xnnzjbvz" method="POST">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="Email" required />
-        <button type="submit">Submit</button>
-      </form>
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xnnzjbvz" method="POST">
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <button type="submit">Send Message</button>
+    </form>
 
-      <div class="contact-links">
-        <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://wa.me/2348053103234" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </section>
+    <p>
+      <a href="https://wa.me/2348053103234" target="_blank">Message me on WhatsApp</a><br>
+      <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank">Visit my Facebook</a>
+    </p>
   </main>
+
   <footer>
     <p>© 2025 My Simple Website</p>
   </footer>
 </body>
-    </html>
+                             </html>
