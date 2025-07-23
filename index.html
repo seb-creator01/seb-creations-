@@ -1,103 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>seb Creation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background: #007bff;
-      color: white;
-      padding: 1em 0;
-    }
-    main {
-      margin: 2em auto;
-      max-width: 600px;
-      background: white;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    footer {
-      background: #333;
-      color: white;
-      padding: 1em 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    .contact-links a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-links a:hover {
-      text-decoration: underline;
-    }
-    img.profile-photo {
-      max-width: 150px;
-      border-radius: 50%;
-      margin-bottom: 1em;
-    }
-    section.services {
-      text-align: left;
-      max-width: 600px;
-      margin: 2em auto;
-      background: white;
-      padding: 1.5em;
-border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    section.services ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    section.services ul li {
-      margin-bottom: 0.8em;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>seb Creation</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    margin: 0; padding: 0;
+    color: #333;
+  }
+  header {
+    background: #007bff;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+  main {
+    max-width: 700px;
+    margin: 2em auto;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  img.profile {
+    display: block;
+    margin: 0 auto 1em;
+    border-radius: 50%;
+    max-width: 150px;
+  }
+  h1, h2 {
+    margin-top: 0;
+  }
+  .services {
+    margin-top: 1.5em;
+  }
+  .services ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  .contact-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  form {
+    margin-top: 2em;
+    text-align: left;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  input[type="email"] {
+    width: 100%;
+padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  footer {
+    background: #222;
+    color: #ccc;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: 3em;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>seb Creation</h1>
-  </header>
-  <main>
-    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile-photo" />
-    <h2>About Me</h2>
-    <p>This is a simple website created to show who I am and what I do.</p>
-    <p>Feel free to explore and learn more!</p>
-    
-    <section class="services">
-      <h3>Services I Offer</h3>
-      <ul>
-        <li>Graphic design</li>
-        <li>Product background editing</li>
-        <li>Photo editing & retouching</li>
-        <li>Logo creation</li>
-        <li>PDF file creation</li>
-        <li>Voice notes creation (male & female)</li>
-        <li>Removal of unwanted objects from photos & backgrounds</li>
-      </ul>
-    </section>
+<header>
+  <h1>seb Creation</h1>
+</header>
 
-    <section class="contact-links">
-      <h3>Contact Me</h3>
-      <a href="https://wa.me/2348053103234" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-<a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <a href="mailto:precioussebastian70@gmail.com">Email Me</a>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 seb Creation</p>
-  </footer>
+<main>
+  <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile" />
+  <h2>About Me</h2>
+  <p>Hello! I'm Precious Sebastian. I offer professional editing and design services tailored to your needs.</p>
+  
+  <div class="services">
+    <h3>Services I Offer</h3>
+    <ul>
+      <li>Graphic Design</li>
+      <li>Product Background Removal</li>
+      <li>Photo Editing & Retouching</li>
+      <li>Logo Design</li>
+      <li>PDF File Creation</li>
+      <li>Creating Voice Notes (Male & Female)</li>
+      <li>Removal of Unwanted Objects from Photos & Backgrounds</li>
+    </ul>
+  </div>
+
+  <div class="contact-links">
+    <h3>Contact Me</h3>
+    <a href="https://wa.me/2348053103234" target="_blank">WhatsApp</a>
+<a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank">Facebook</a>
+  </div>
+
+  <form action="https://formspree.io/f/xnnzjbvz" method="POST">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="Email" placeholder="you@example.com" required />
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
+</footer>
 </body>
-  </html>
+        </html>
