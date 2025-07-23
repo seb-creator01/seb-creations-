@@ -85,7 +85,13 @@ display: block;
   <header>
     <h1>seb Creation</h1>
   </header>
-
+  textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
   <main>
     <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile" />
     
@@ -110,15 +116,16 @@ display: block;
       <a href="https://wa.me/2348053103234" target="_blank">WhatsApp</a>
       <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank">Facebook</a>
     </div>
-
     <form action="https://formspree.io/f/xnnzjbvz" method="POST">
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="Email" placeholder="you@example.com" required />
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="Email" placeholder="you@example.com" required />
 
-      <label for="message">Your Message</label>
-      <textarea id="message" name="Message" rows="4" placeholder="Type your message here..." required></textarea>
+  <label for="message">Your Message</label>
+  <textarea id="message" name="Message" rows="5" placeholder="Type your message here..." required></textarea>
 
-      <button type="submit">Submit</button>
+  <input type="hidden" name="_redirect" value="https://seb-creator01.github.io/My-first-website-/thankyou.html" />
+
+  <button type="submit">Send Message</button>
     </form>
   </main>
 
