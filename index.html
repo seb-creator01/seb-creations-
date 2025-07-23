@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,11 +58,12 @@
   }
   input[type="email"] {
     width: 100%;
-padding: 0.5em;
+    padding: 0.5em;
     margin-bottom: 1em;
     border-radius: 5px;
     border: 1px solid #ccc;
-  }
+
+}
   button {
     background: #007bff;
     color: white;
@@ -69,6 +71,11 @@ padding: 0.5em;
     padding: 0.7em 1.5em;
     border-radius: 5px;
     cursor: pointer;
+  }
+  #form-message {
+    color: green;
+    display: none;
+    margin-top: 1em;
   }
   footer {
     background: #222;
@@ -108,15 +115,39 @@ padding: 0.5em;
 <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank">Facebook</a>
   </div>
 
-  <form action="https://formspree.io/f/xnnzjbvz" method="POST">
+  <form id="contact-form" action="https://formspree.io/f/xnnzjbvz" method="POST">
     <label for="email">Your Email</label>
     <input type="email" id="email" name="Email" placeholder="you@example.com" required />
     <button type="submit">Submit</button>
   </form>
+  <p id="form-message">Thank you for contacting me!</p>
 </main>
 
 <footer>
   <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
 </footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const message = document.getElementById('form-message');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        message.style.display = 'block';
+        form.reset();
+      } else {
+        alert('Oops! There was a problem submitting your form');
+      }
+    }).catch(() => alert('Oops! There was a problem submitting your form'));
+  });
+</script>
 </body>
-        </html>
+    </html>
