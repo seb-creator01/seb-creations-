@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>seb Creation</title>
+  <title>Seb Creation</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -19,7 +19,7 @@
     }
     main {
       margin: 2em auto;
-      max-width: 600px;
+      max-width: 700px;
       background: white;
       padding: 2em;
       border-radius: 8px;
@@ -29,75 +29,70 @@
       background: #333;
       color: white;
       padding: 1em 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      margin-top: 2em;
     }
-    .contact-links a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-links a:hover {
-      text-decoration: underline;
-    }
-    img.profile-photo {
-      max-width: 150px;
+    img.profile {
+      width: 150px;
       border-radius: 50%;
       margin-bottom: 1em;
     }
-    section.services {
-      text-align: left;
-      max-width: 600px;
-      margin: 2em auto;
-      background: white;
-      padding: 1.5em;
-border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
+    .contact-links a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
     }
-    section.services ul {
-      list-style: none;
-      padding-left: 0;
+    .facebook { background: #3b5998; }
+    .whatsapp { background: #25D366; }
+form {
+      margin-top: 2em;
     }
-    section.services ul li {
-      margin-bottom: 0.8em;
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      width: 80%;
+      max-width: 300px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>seb Creation</h1>
+    <h1>Seb Creation</h1>
   </header>
   <main>
-    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile-photo" />
+    <img class="profile" src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/refs/heads/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" />
     <h2>About Me</h2>
-    <p>This is a simple website created to show who I am and what I do.</p>
-    <p>Feel free to explore and learn more!</p>
-    
-    <section class="services">
-      <h3>Services I Offer</h3>
-      <ul>
-        <li>Graphic design</li>
-        <li>Product background editing</li>
-        <li>Photo editing & retouching</li>
-        <li>Logo creation</li>
-        <li>PDF file creation</li>
-        <li>Voice notes creation (male & female)</li>
-        <li>Removal of unwanted objects from photos & backgrounds</li>
-      </ul>
-    </section>
+    <p>I specialize in graphic design, product background removal, photo editing, retouching, logo design, PDF creation, and more. Let’s create something great together!</p>
 
-    <section class="contact-links">
-      <h3>Contact Me</h3>
-      <a href="https://wa.me/2348053103234" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-<a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <a href="mailto:precioussebastian70@gmail.com">Email Me</a>
-    </section>
+    <h3>Services Offered:</h3>
+    <ul style="text-align: left;">
+      <li>Graphic Design</li>
+      <li>Product Background Removal</li>
+      <li>Photo Editing & Retouching</li>
+      <li>Logo Creation</li>
+      <li>PDF Files Creation</li>
+      <li>Talking Photo</li>
+      <li>Voice Note (Male & Female)</li>
+      <li>Removal of Unwanted Objects</li>
+    </ul>
+
+    <div class="contact-links">
+      <a class="facebook" href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank">Facebook</a>
+      <a class="whatsapp" href="https://wa.me/2348053103234" target="_blank">WhatsApp</a>
+    </div>
+
+    <form action="https://formspree.io/f/xnnzjbvz" method="post">
+<h3>Contact Me</h3>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <input type="text" name="message" placeholder="Your Message" required><br>
+      <button type="submit">Send Message</button>
+    </form>
   </main>
+
   <footer>
-    <p>© 2025 seb Creation</p>
+    <p>© 2025 Seb Creation</p>
   </footer>
 </body>
-</html>
+  </html>
