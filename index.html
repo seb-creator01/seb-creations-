@@ -132,6 +132,59 @@ margin-top: 2em;
         <li>Custom Flyer Design</li>
       </ul>
     </section>
+    
+<section class="testimonials">
+  <h2>Testimonials</h2>
+  <div class="carousel">
+    <div class="testimonial active">
+      <p>"Seb Creation transformed my photos perfectly. Highly recommended!"</p>
+      <h4>- Sarah James</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Their design work was fast, clean, and creative. I’ll be back!"</p>
+      <h4>- David Obi</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Great service and communication. Really happy with the results."</p>
+      <h4>- Ada M.</h4>
+    </div>
+  </div>
+</section>
+
+<style>
+.testimonials {
+  text-align: center;
+  padding: 2em;
+  background: #f0f8ff;
+}
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+.testimonial {
+  display: none;
+  padding: 1em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.testimonial.active {
+  display: block;
+}
+</style>
+
+<script>
+let current = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+
+function showNextTestimonial() {
+  testimonials[current].classList.remove("active");
+  current = (current + 1) % testimonials.length;
+  testimonials[current].classList.add("active");
+}
+setInterval(showNextTestimonial, 4000);
+  </script>
 
     <section id="contact" class="contact-links">
       <h3>Contact Me</h3>
