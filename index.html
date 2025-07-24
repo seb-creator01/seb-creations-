@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>seb Creation</title>
   <style>
-    body {
+    <body id="top">
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f9f9f9;
       margin: 0; padding: 0;
@@ -271,7 +271,18 @@ margin-top: 2em;
   border-radius: 5px;
   font-weight: bold;
 }
-
+.footer-nav {
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+.footer-nav a {
+  color: #ccc;
+  margin: 0 0.5em;
+  text-decoration: none;
+}
+.footer-nav a:hover {
+  text-decoration: underline;
+}
 @media (max-width: 1024px) {
   main {
     max-width: 90%;
@@ -411,7 +422,15 @@ setInterval(showNextTestimonial, 4000);
   </main>
 
   <footer>
-    <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
+  <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
+  <div class="footer-nav">
+    <a href="#top">Back to Top</a> |
+    <a href="#services">Services</a> |
+    <a href="#portfolio">Portfolio</a> |
+    <a href="#pricing">Pricing</a> |
+    <a href="#faq">FAQ</a> |
+    <a href="#contact">Contact</a>
+  </div>
   </footer>
 </body>
                                     </html>
