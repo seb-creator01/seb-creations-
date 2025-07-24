@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>seb Creation</title>
   <style>
+     html {
+    scroll-behavior: smooth;
+     }
     <body id="top">
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f9f9f9;
@@ -99,6 +102,22 @@ margin-top: 2em;
       text-align: center;
       margin-top: 3em;
     }
+    .back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  display: none;
+  z-index: 1000;
+}
+.back-to-top:hover {
+  background: #0056b3;
+}
     .pricing {
   margin-top: 2em;
   text-align: center;
@@ -423,7 +442,19 @@ setInterval(showNextTestimonial, 4000);
 
   <footer>
   <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
+    <a href="#top" class="back-to-top">↑</a>```
   <div class="footer-nav">
+    
+    <script>
+  const backToTop = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+</script>
     <a href="#top">Back to Top</a> |
     <a href="#services">Services</a> |
     <a href="#portfolio">Portfolio</a> |
