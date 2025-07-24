@@ -86,6 +86,38 @@ margin-top: 2em;
       text-align: center;
       margin-top: 3em;
     }
+    .pricing {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.pricing-card {
+  background: #f0f0f0;
+  padding: 1.5em;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.pricing-card h4 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.pricing-card .price {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
   </style>
 </head>
 <body>
@@ -198,6 +230,21 @@ function showNextTestimonial() {
 setInterval(showNextTestimonial, 4000);
 </script>
   </script>
+      <section class="pricing">
+  <h3>Pricing</h3>
+  <div class="price-card">
+    <h4>Basic</h4>
+    <p>₦2,000 - Simple edits & designs</p>
+  </div>
+  <div class="price-card">
+    <h4>Standard</h4>
+    <p>₦5,000 - Product background, voice notes, etc.</p>
+  </div>
+  <div class="price-card">
+    <h4>Premium</h4>
+    <p>₦10,000+ - Full project design, branding, logos</p>
+  </div>
+      </section>
 
     <section id="contact" class="contact-links">
       <h3>Contact Me</h3>
