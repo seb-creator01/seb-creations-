@@ -248,6 +248,74 @@ margin-top: 2em;
   margin: 0;
   color: #555;
 }
+@media (max-width: 1024px) {
+  main {
+    max-width: 90%;
+    margin: 1.5em auto;
+    padding: 1.5em;
+  }
+  .pricing-cards {
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+  .pricing-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+  main {
+    max-width: 95%;
+    margin: 1em auto;
+    padding: 1em;
+  }
+  .profile {
+    max-width: 120px;
+  }
+  .services ul, .portfolio-items {
+    padding-left: 15px;
+  }
+  .pricing-cards {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .pricing-card {
+    width: 100%;
+  }
+  .contact-links a {
+    display: inline-block;
+    margin: 0.5em 0.75em 0.5em 0;
+  }
+  form input[type="email"] {
+    font-size: 1em;
+  }
+  button {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+  h2, h3 {
+    font-size: 1.2em;
+  }
+  .profile {
+    max-width: 100px;
+  }
+  form input[type="email"] {
+    font-size: 0.95em;
+  }
+  button {
+    font-size: 1em;
+  }
+}
 
 </style>
 <script>
