@@ -132,7 +132,20 @@ margin-top: 2em;
         <li>Custom Flyer Design</li>
       </ul>
     </section>
-    
+    <section class="testimonials">
+  <h3>What Clients Say</h3>
+  <div class="testimonial">
+    <p>"Seb Creation delivered high-quality designs quickly. Totally impressed!"</p>
+    <span>- Amanda, Lagos</span>
+  </div>
+  <div class="testimonial">
+    <p>"I love the voice notes and background edits. Highly recommended!"</p>
+    <span>- Daniel, Abuja</span>
+  </div>
+  <div class="testimonial">
+    <p>"Very professional and easy to work with. Will definitely hire again."</p>
+    <span>- Sophia, Port Harcourt</span>
+  </div>
 <section class="testimonials">
   <h2>Testimonials</h2>
   <div class="carousel">
@@ -150,21 +163,6 @@ margin-top: 2em;
     </div>
   </div>
 </section>
-    <section class="testimonials">
-  <h3>What Clients Say</h3>
-  <div class="testimonial">
-    <p>"Seb Creation delivered high-quality designs quickly. Totally impressed!"</p>
-    <span>- Amanda, Lagos</span>
-  </div>
-  <div class="testimonial">
-    <p>"I love the voice notes and background edits. Highly recommended!"</p>
-    <span>- Daniel, Abuja</span>
-  </div>
-  <div class="testimonial">
-    <p>"Very professional and easy to work with. Will definitely hire again."</p>
-    <span>- Sophia, Port Harcourt</span>
-  </div>
-    </section>
 
 <style>
 .testimonials {
@@ -188,7 +186,6 @@ margin-top: 2em;
   display: block;
 }
 </style>
-
 <script>
 let current = 0;
 const testimonials = document.querySelectorAll(".testimonial");
@@ -199,6 +196,7 @@ function showNextTestimonial() {
   testimonials[current].classList.add("active");
 }
 setInterval(showNextTestimonial, 4000);
+</script>
   </script>
 
     <section id="contact" class="contact-links">
