@@ -114,7 +114,59 @@ display: block;
 <li>Removal of Unwanted Objects from Photos & Backgrounds</li>
       </ul>
     </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/300x200?text=Project+6" alt="Project 6" />
+      <h3>Voice Notes</h3>
+      <p>Custom male and female voice note samples.</p>
+    </div>
+  </div>
+</section>
 
+<style>
+  #portfolio {
+    max-width: 900px;
+    margin: 3em auto;
+    padding: 0 1em;
+  }
+  #portfolio h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .portfolio-item {
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  .portfolio-item img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+  .portfolio-item h3 {
+    margin: 0.8em 0 0.4em;
+  }
+  .portfolio-item p {
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
+```
+
+---
+
+*How to add:*
+
+- Paste the `<section id="portfolio">...</section>` block inside your `<main>` tag, before the contact form.
+- Paste the `<style>` block inside your `<head>` or existing `<style>` block.
+
+Want me to create the full updated file with this included?
     <div class="contact-links">
       <h3>Contact Me</h3>
       <a href="https://wa.me/2348053103234" target="_blank">WhatsApp</a>
