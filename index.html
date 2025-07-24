@@ -8,7 +8,8 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f9f9f9;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       color: #333;
     }
     header {
@@ -34,14 +35,19 @@
     h1, h2 {
       margin-top: 0;
     }
-    .services {
+    .services, .portfolio {
       margin-top: 1.5em;
     }
-    .services ul {
+    .services ul, .portfolio ul {
       list-style-type: disc;
       padding-left: 20px;
     }
-    .contact-links a {
+    .portfolio img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+.contact-links a {
       margin-right: 15px;
       text-decoration: none;
       color: #007bff;
@@ -52,17 +58,15 @@
       text-align: left;
     }
     label {
-display: block;
+      display: block;
       margin-bottom: 0.5em;
     }
-    input[type="email"],
-    textarea {
+    input[type="email"], textarea {
       width: 100%;
       padding: 0.5em;
       margin-bottom: 1em;
       border-radius: 5px;
       border: 1px solid #ccc;
-      font-family: inherit;
     }
     button {
       background: #007bff;
@@ -85,123 +89,57 @@ display: block;
   <header>
     <h1>seb Creation</h1>
   </header>
-  <style>
-  textarea {
-    width: 100%;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 1em;
-    min-height: 100px;
-    resize: vertical;
-  }
-  </style>
+
   <main>
     <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile" />
     
     <h2>About Me</h2>
     <p>Hello! I'm Precious Sebastian. I offer professional editing and design services tailored to your needs.</p>
-    
+
     <div class="services">
       <h3>Services I Offer</h3>
       <ul>
         <li>Graphic Design</li>
         <li>Product Background Removal</li>
         <li>Photo Editing & Retouching</li>
-        <li>Logo Design</li>
+<li>Logo Design</li>
         <li>PDF File Creation</li>
         <li>Creating Voice Notes (Male & Female)</li>
-<li>Removal of Unwanted Objects from Photos & Backgrounds</li>
+        <li>Removal of Unwanted Objects from Photos & Backgrounds</li>
       </ul>
     </div>
-    </div>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/300x200?text=Project+6" alt="Project 6" />
-      <h3>Voice Notes</h3>
-      <p>Custom male and female voice note samples.</p>
-    </div>
-  </div>
-</section>
 
-<style>
-<section id="portfolio">
-    <h2>My Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1" />
-        <h3>Graphic Design</h3>
-        <p>Professional flyer design for a local event.</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" />
-        <h3>Product Background</h3>
-        <p>Cleaned up product photos for e-commerce.</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" />
-        <h3>Photo Retouching</h3>
-        <p>Enhanced portraits with natural retouching.</p>
-      </div>
-<div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4" />
-        <h3>Logo Design</h3>
-        <p>Custom logo for a startup brand.</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+5" alt="Project 5" />
-        <h3>PDF Creation</h3>
-        <p>Professional brochures and catalogs.</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+6" alt="Project 6" />
-        <h3>Voice Notes</h3>
-        <p>Custom male and female voice note samples.</p>
-      </div>
+    <div class="portfolio">
+      <h3>My Portfolio</h3>
+      <ul>
+        <li>Product background designs</li>
+        <li>Logo samples</li>
+        <li>Before & After photo retouching</li>
+        <li>Voice-over work previews</li>
+        <li>PDF design samples</li>
+        <li>Edited banners and social media posts</li>
+      </ul>
     </div>
-  </section>
-  
+
     <div class="contact-links">
       <h3>Contact Me</h3>
       <a href="https://wa.me/2348053103234" target="_blank">WhatsApp</a>
       <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank">Facebook</a>
     </div>
+
     <form action="https://formspree.io/f/xnnzjbvz" method="POST">
-  <label for="email">Your Email</label>
-  <input type="email" id="email" name="Email" placeholder="you@example.com" required />
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
 
-  <label for="message">Your Message</label>
-  <textarea id="message" name="Message" placeholder="Type your message here..." required></textarea>
-
-  <button type="submit">Send Message</button>
-</form>
-
-<div id="thank-you" style="display:none; color:green; margin-top:15px;">
-  Thank you! Your message has been sent.
-</div>
-
-<script>
-  const form = document.querySelector('form');
-  const thankYou = document.getElementById('thank-you');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      form.reset();
-      thankYou.style.display = 'block';
-    }
-  });
-</script>
+      <input type="hidden" name="_redirect" value="https://seb-creator01.github.io/My-first-website-/thank-you.html" />
+<button type="submit">Send Message</button>
+    </form>
   </main>
-
   <footer>
     <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
   </footer>
 </body>
-        </html>
-                                                                 </html>
+  </html>
