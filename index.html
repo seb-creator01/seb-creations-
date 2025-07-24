@@ -8,8 +8,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f9f9f9;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       color: #333;
     }
     header {
@@ -17,6 +16,17 @@
       color: white;
       padding: 1em 0;
       text-align: center;
+    }
+    nav {
+      background: #0056b3;
+      text-align: center;
+      padding: 0.5em 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
     main {
       max-width: 700px;
@@ -35,38 +45,31 @@
     h1, h2 {
       margin-top: 0;
     }
-    .services, .portfolio {
-      margin-top: 1.5em;
-    }
     .services ul, .portfolio ul {
       list-style-type: disc;
       padding-left: 20px;
     }
-    .portfolio img {
-      max-width: 100%;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-.contact-links a {
+    .contact-links a {
       margin-right: 15px;
       text-decoration: none;
       color: #007bff;
       font-weight: bold;
     }
     form {
-      margin-top: 2em;
+margin-top: 2em;
       text-align: left;
     }
     label {
       display: block;
       margin-bottom: 0.5em;
+      margin-top: 1em;
     }
     input[type="email"], textarea {
       width: 100%;
       padding: 0.5em;
-      margin-bottom: 1em;
       border-radius: 5px;
       border: 1px solid #ccc;
+      margin-bottom: 1em;
     }
     button {
       background: #007bff;
@@ -90,56 +93,64 @@
     <h1>seb Creation</h1>
   </header>
 
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
     <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile" />
-    
-    <h2>About Me</h2>
-    <p>Hello! I'm Precious Sebastian. I offer professional editing and design services tailored to your needs.</p>
 
-    <div class="services">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Precious Sebastian. I offer professional editing and design services tailored to your needs.</p>
+    </section>
+
+    <section id="services" class="services">
       <h3>Services I Offer</h3>
       <ul>
-        <li>Graphic Design</li>
+<li>Graphic Design</li>
         <li>Product Background Removal</li>
         <li>Photo Editing & Retouching</li>
-<li>Logo Design</li>
+        <li>Logo Design</li>
         <li>PDF File Creation</li>
         <li>Creating Voice Notes (Male & Female)</li>
         <li>Removal of Unwanted Objects from Photos & Backgrounds</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="portfolio">
-      <h3>My Portfolio</h3>
+    <section id="portfolio" class="portfolio">
+      <h3>Portfolio</h3>
       <ul>
-        <li>Product background designs</li>
-        <li>Logo samples</li>
-        <li>Before & After photo retouching</li>
-        <li>Voice-over work previews</li>
-        <li>PDF design samples</li>
-        <li>Edited banners and social media posts</li>
+        <li>Logo for Brand X</li>
+        <li>Photo Retouch Sample</li>
+        <li>PDF Resume Design</li>
+        <li>Voice Note Demo</li>
+        <li>Before/After Image Edit</li>
+        <li>Custom Flyer Design</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="contact-links">
+    <section id="contact" class="contact-links">
       <h3>Contact Me</h3>
       <a href="https://wa.me/2348053103234" target="_blank">WhatsApp</a>
       <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank">Facebook</a>
-    </div>
 
-    <form action="https://formspree.io/f/xnnzjbvz" method="POST">
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required />
-      
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
-
-      <input type="hidden" name="_redirect" value="https://seb-creator01.github.io/My-first-website-/thank-you.html" />
-<button type="submit">Send Message</button>
-    </form>
+      <form action="https://formspree.io/f/xnnzjbvz" method="POST">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="Email" placeholder="you@example.com" required />
+        
+        <label for="message">Your Message</label>
+        <textarea id="message" name="Message" rows="4" placeholder="Write your message here..." required></textarea>
+<button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
+
   <footer>
     <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
   </footer>
 </body>
-  </html>
+                                    </html>
