@@ -70,48 +70,41 @@
       padding-left: 20px;
     }
     .contact-links {
-  margin-top: 1.5em;
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  margin-top: 1em;
 }
-
-.contact-links a.contact-btn {
-  display: inline-block;
-  background-color: #007bff;
-  color: white;
-  padding: 0.6em 1.2em;
-  margin-right: 10px;
-  border-radius: 5px;
+.contact-link {
   text-decoration: none;
   font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  color: white;
   transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
 }
-
-.contact-links a.contact-btn:hover {
-  background-color: #0056b3;
+.contact-link.email {
+  background-color: #ea4335;
 }
-    form {
-margin-top: 2em;
-      text-align: left;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.5em;
-      margin-top: 1em;
-    }
-    input[type="email"], textarea {
-      width: 100%;
-      padding: 0.5em;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-bottom: 1em;
-    }
-    button {
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 0.7em 1.5em;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.contact-link.email:hover {
+  background-color: #c23321;
+}
+.contact-link.whatsapp {
+  background-color: #25d366;
+}
+.contact-link.whatsapp:hover {
+  background-color: #1aaa57;
+}
+.contact-link.facebook {
+  background-color: #1877f2;
+}
+.contact-link.facebook:hover {
+  background-color: #145dbf;
+      }
     footer {
       background: #222;
       color: #ccc;
@@ -464,12 +457,18 @@ setInterval(showNextTestimonial, 4000);
   <div class="contact-links">
     <h3>Contact Me</h3>
     <!-- other contact content -->
-  </div>
-</section>
-  <a href="https://wa.me/2348053103234" target="_blank" class="contact-btn">WhatsApp</a>
-  <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" class="contact-btn">Facebook</a>
-  <a href="mailto:precioussebastian70@gmail.com" target="_blank" class="contact-btn">Email</a>
-      </div>
+  <div class="contact-links">
+  <h3>Contact Me</h3>
+  <a href="mailto:Precioussebastian70@gmail.com" target="_blank" class="contact-link email">
+    📧 Email
+  </a>
+  <a href="https://wa.me/2348053103234" target="_blank" class="contact-link whatsapp">
+    💬 WhatsApp
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" class="contact-link facebook">
+    👍 Facebook
+  </a>
+</div>
       <form action="https://formspree.io/f/xnnzjbvz" method="POST">
         <label for="email">Your Email</label>
         <input type="email" id="email" name="Email" placeholder="you@example.com" required />
