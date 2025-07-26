@@ -69,36 +69,30 @@
       list-style-type: disc;
       padding-left: 20px;
     }
-    .contact-links {
-  margin-top: 2em;
-  text-align: center;
-}
-
-.contact-btn {
-  display: inline-block;
-  padding: 0.5em 1em;
-  margin: 0.5em;
-  border-radius: 5px;
-  color: white;
-  font-weight: 600;
+    .contact-links a.contact-btn {
+  padding: 0.4em 1em;
+  font-size: 0.9em;
+  border-radius: 4px;
   text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin: 5px;
+  color: white;
   transition: background-color 0.3s ease;
 }
 
-.contact-btn.whatsapp {
+.contact-links a.whatsapp {
   background-color: #25D366;
 }
-
-.contact-btn.facebook {
+.contact-links a.facebook {
   background-color: #3b5998;
 }
-
-.contact-btn.gmail {
-  background-color: #D44638;
+.contact-links a.gmail {
+  background-color: #ea4335;
 }
 
-.contact-btn:hover {
-  opacity: 0.9;
+.contact-links a.contact-btn:hover {
+  opacity: 0.85;
 }
 
     footer {
@@ -455,16 +449,11 @@ setInterval(showNextTestimonial, 4000);
     <!-- other contact content -->
   <div class="contact-links">
   <h3>Contact Me</h3>
-  <a href="mailto:Precioussebastian70@gmail.com" target="_blank" class="contact-link email">
-    📧 Email
-  </a>
-  <a href="https://wa.me/2348053103234" target="_blank" class="contact-link whatsapp">
-    💬 WhatsApp
-  </a>
-  <a href="https://www.facebook.com/profile.php?id=100088580289477" target="_blank" class="contact-link facebook">
-    👍 Facebook
-  </a>
+  <a href="https://wa.me/2348053103234" class="contact-btn whatsapp" target="_blank">WhatsApp</a>
+  <a href="https://www.facebook.com/profile.php?id=100088580289477" class="contact-btn facebook" target="_blank">Facebook</a>
+  <a href="mailto:Precioussebastian70@gmail.com" class="contact-btn gmail">Gmail</a>
 </div>
+
       <form action="https://formspree.io/f/xnnzjbvz" method="POST">
         <label for="email">Your Email</label>
         <input type="email" id="email" name="Email" placeholder="you@example.com" required />
