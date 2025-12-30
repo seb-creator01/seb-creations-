@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Seb Creation</title>
   
-
   <meta name="description" content="Professional editing and design services by Precious Sebastian. Graphic design, photo editing, logo design and more." />
-
   <meta property="og:type" content="website" />
   <meta property="og:title" content="seb Creation" />
   <meta property="og:description" content="Professional editing and design services by Precious Sebastian." />
@@ -17,20 +15,42 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="seb Creation" />
   <meta name="twitter:description" content="Professional editing and design services by Precious Sebastian." />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" />
+  
   <style>
      html {
     scroll-behavior: smooth;
      }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* --- UPDATED PROFESSIONAL BACKGROUND CODE (Option 2) --- */
       background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 60%, #e6f0ff 100%);
       min-height: 100vh;
-      /* -------------------------------------------------------- */
       margin: 0; padding: 0;
       color: #333;
     }
+
+    /* --- SPA PAGE LOGIC STYLES --- */
+    .page-section {
+      display: none; /* Hide all sections by default */
+      animation: fadeInPage 0.6s ease-out forwards;
+    }
+    .page-section.active {
+      display: block; /* Show active section */
+    }
+    nav a {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    nav a.active-link {
+      color: #ffd700; /* Highlight active nav item */
+      border-bottom: 2px solid #ffd700;
+    }
+    @keyframes fadeInPage {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* ----------------------------- */
+
     header {
       background: #007bff;
       color: white;
@@ -41,6 +61,9 @@
       background: #0056b3;
       text-align: center;
       padding: 0.5em 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
@@ -49,20 +72,19 @@
       font-weight: bold;
     }
     form button {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 0.6em 1.2em;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  margin-top: 0.5em;
-}
-
-form button:hover {
-  background: #0056b3;
-}
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.6em 1.2em;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      margin-top: 0.5em;
+    }
+    form button:hover {
+      background: #0056b3;
+    }
     main {
       max-width: 700px;
       margin: 2em auto;
@@ -85,30 +107,20 @@ form button:hover {
       padding-left: 20px;
     }
     .contact-links a.contact-btn {
-  padding: 0.4em 1em;
-  font-size: 0.9em;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  margin: 5px;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-.contact-links a.whatsapp {
-  background-color: #25D366;
-}
-.contact-links a.facebook {
-  background-color: #3b5998;
-}
-.contact-links a.gmail {
-  background-color: #ea4335;
-}
-
-.contact-links a.contact-btn:hover {
-  opacity: 0.85;
-}
+      padding: 0.4em 1em;
+      font-size: 0.9em;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin: 5px;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    .contact-links a.whatsapp { background-color: #25D366; }
+    .contact-links a.facebook { background-color: #3b5998; }
+    .contact-links a.gmail { background-color: #ea4335; }
+    .contact-links a.contact-btn:hover { opacity: 0.85; }
 
     footer {
       background: #222;
@@ -118,428 +130,253 @@ form button:hover {
       margin-top: 3em;
     }
     .back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 20px;
-  background: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 20px;
-  display: none;
-  z-index: 1000;
-}
-.back-to-top:hover {
-  background: #0056b3;
-}
-    .pricing {
-  margin-top: 2em;
-  text-align: center;
-}
-
-.pricing-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em;
-  margin-top: 1em;
-}
-
-.pricing-card {
-  background: #f0f0f0;
-  padding: 1.5em;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.pricing-card h4 {
-  margin-top: 0;
-  color: #007bff;
-}
-
-}
-.portfolio-gallery img {
-  animation: zoomIn 0.8s ease-out;
-}
-
-.contact-links, form {
-  animation: fadeIn 1s ease-out;
-}
-
-.pricing-card .price {
-  font-size: 1.5em;
-  margin: 0.5em 0;
-  font-weight: bold;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-.animated-heading {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.portfolio-gallery img {
-  animation: zoomIn 0.8s ease-out;
-}
-
-.contact-links, form {
-  animation: fadeIn 1s ease-out;
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      display: none;
+      z-index: 1000;
     }
+    .back-to-top:hover { background: #0056b3; }
+    
+    .pricing { margin-top: 2em; text-align: center; }
+    .pricing-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 1em; margin-top: 1em; }
+    .pricing-card { background: #f0f0f0; padding: 1.5em; border-radius: 10px; width: 250px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .pricing-card h4 { margin-top: 0; color: #007bff; }
+    .pricing-card .price { font-size: 1.5em; margin: 0.5em 0; font-weight: bold; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .animated-heading { animation: fadeIn 1s ease-out forwards; }
+    .portfolio-gallery img { animation: zoomIn 0.8s ease-out; }
+
+    .portfolio-gallery { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
+    .portfolio-gallery img { width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); object-fit: cover; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .portfolio-gallery img:hover { transform: scale(1.05); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); }
+
+    .testimonials { text-align: center; padding: 2em; background: #f0f8ff; }
+    .carousel { position: relative; max-width: 600px; margin: auto; }
+    .testimonial { display: none; padding: 1em; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .testimonial.active { display: block; }
+    
+    .faq { margin-top: 3em; }
+    .faq h2 { text-align: center; color: #007bff; }
+    .faq-item { margin-bottom: 1.5em; }
+    .faq-item h4 { margin-bottom: 0.3em; color: #333; }
+    .faq-item p { margin: 0; color: #555; }
+    
+    .cta { background: #007bff; color: white; text-align: center; padding: 2em 1em; border-radius: 10px; margin-top: 3em; }
+    .cta h2 { margin: 0 0 0.5em; }
+    .cta-button { display: inline-block; margin-top: 1em; background: white; color: #007bff; padding: 0.8em 1.5em; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    
+    .footer-nav { margin-top: 1em; font-size: 0.9em; }
+    .footer-nav a { color: #ccc; margin: 0 0.5em; text-decoration: none; }
+    .footer-nav a:hover { text-decoration: underline; }
+
+    @media (max-width: 1024px) { main { max-width: 90%; } .pricing-card { width: 45%; } }
+    @media (max-width: 768px) { .pricing-card { width: 100%; } }
   </style>
 </head>
 <body id="top">
   <header>
-    <h1>seb Creation</h1>
+    <h1 class="animated-heading">seb Creation</h1>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+  <nav id="main-nav">
+    <a onclick="navigateTo('about')" id="link-about" class="active-link">About</a>
+    <a onclick="navigateTo('services')" id="link-services">Services</a>
+    <a onclick="navigateTo('portfolio')" id="link-portfolio">Portfolio</a>
+    <a onclick="navigateTo('pricing')" id="link-pricing">Pricing</a>
+    <a onclick="navigateTo('contact')" id="link-contact">Contact</a>
   </nav>
 
   <main>
     <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile" />
 
-    <section id="about">
+    <section id="about" class="page-section active">
       <h2>About Me</h2>
       <p>Hello! I'm Precious Sebastian. I offer professional editing and design services tailored to your needs.</p>
-    </section>
-
-    <section id="services" class="services">
-      <h3>Services I Offer</h3>
-      <ul>
-<li>Graphic Design</li>
-        <li>Product Background Removal</li>
-        <li>Photo Editing & Retouching</li>
-        <li>Logo Design</li>
-        <li>PDF File Creation</li>
-        <li>Creating Voice Notes (Male & Female)</li>
-        <li>Removal of Unwanted Objects from Photos & Backgrounds</li>
-      </ul>
-    </section>
-    <section id="portfolio">
-  <h2>Portfolio</h2>
-  <div class="portfolio-gallery">
-    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725153344.jpg" alt="Portfolio Image 1" />
-    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725153155.jpg" alt="Portfolio Image 2" />
-    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725152759.jpg" alt="Portfolio Image 3" />
-    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725151830.jpg" alt="Portfolio Image 4" />
-    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725224116.jpg" alt="Portfolio Image 5" />
-    <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725151423.jpg" alt="Portfolio Image 6" />
-  </div>
-</section>
-    <section class="testimonials">
-  <h3>What Clients Say</h3>
-  <div class="testimonial">
-    <p>"Seb Creation delivered high-quality designs quickly. Totally impressed!"</p>
-    <span>- Amanda, Lagos</span>
-  </div>
-  <div class="testimonial">
-    <p>"I love the voice notes and background edits. Highly recommended!"</p>
-    <span>- Daniel, Abuja</span>
-  </div>
-  <div class="testimonial">
-    <p>"Very professional and easy to work with. Will definitely hire again."</p>
-    <span>- Sophia, Port Harcourt</span>
-  </div>
-<section class="testimonials">
-  <h2>Testimonials</h2>
-  <div class="carousel">
-    <div class="testimonial active">
-      <p>"Seb Creation transformed my photos perfectly. Highly recommended!"</p>
-      <h4>- Sarah James</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Their design work was fast, clean, and creative. I’ll be back!"</p>
-      <h4>- David Obi</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Great service and communication. Really happy with the results."</p>
-      <h4>- Ada M.</h4>
-    </div>
-  </div>
-</section>
-
-<style>
-.portfolio-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-justify-content: center;
-}
-.portfolio-gallery img {
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  object-fit: cover;
-} 
-.portfolio-gallery img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-  
-.testimonials {
-  text-align: center;
-  padding: 2em;
-  background: #f0f8ff;
-}
-.carousel {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-}
-.testimonial {
-  display: none;
-  padding: 1em;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.testimonial.active {
-  display: block;
-}
-  .faq {
-  margin-top: 3em;
-}
-.faq h2 {
-  text-align: center;
-  color: #007bff;
-}
-.faq-item {
-  margin-bottom: 1.5em;
-}
-.faq-item h4 {
-  margin-bottom: 0.3em;
-  color: #333;
-}
-.faq-item p {
-  margin: 0;
-  color: #555;
-}
-  .cta {
-  background: #007bff;
-  color: white;
-  text-align: center;
-  padding: 2em 1em;
-  border-radius: 10px;
-  margin-top: 3em;
-}
-
-.cta h2 {
-  margin: 0 0 0.5em;
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 1em;
-  background: white;
-  color: #007bff;
-  padding: 0.8em 1.5em;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.footer-nav {
-  margin-top: 1em;
-  font-size: 0.9em;
-}
-.footer-nav a {
-  color: #ccc;
-  margin: 0 0.5em;
-  text-decoration: none;
-}
-.footer-nav a:hover {
-  text-decoration: underline;
-}
-@media (max-width: 1024px) {
-  main {
-    max-width: 90%;
-    margin: 1.5em auto;
-    padding: 1.5em;
-  }
-  .pricing-cards {
-    flex-wrap: wrap;
-    gap: 1.5em;
-  }
-  .pricing-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.8em;
-  }
-  main {
-    max-width: 95%;
-    margin: 1em auto;
-    padding: 1em;
-  }
-  .profile {
-    max-width: 120px;
-  }
-  .services ul, .portfolio-items {
-    padding-left: 15px;
-  }
-  .pricing-cards {
-    flex-direction: column;
-    gap: 1.5em;
-  }
-  .pricing-card {
-    width: 100%;
-  }
-  .contact-links a {
-    display: inline-block;
-    margin: 0.5em 0.75em 0.5em 0;
-  }
-  form input[type="email"] {
-    font-size: 1em;
-  }
-  button {
-    width: 100%;
-    padding: 0.8em;
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5em;
-  }
-  h2, h3 {
-    font-size: 1.2em;
-  }
-  .profile {
-    max-width: 100px;
-  }
-  form input[type="email"] {
-    font-size: 0.95em;
-  }
-  button {
-    font-size: 1em;
-  }
-}
-
-</style>
-<script>
-let current = 0;
-const testimonials = document.querySelectorAll(".testimonial");
-
-function showNextTestimonial() {
-  testimonials[current].classList.remove("active");
-  current = (current + 1) % testimonials.length;
-  testimonials[current].classList.add("active");
-}
-setInterval(showNextTestimonial, 4000);
-</script>
-  </script>
-      <section class="pricing">
-  <h3>Pricing</h3>
-  <div class="price-card">
-    <h4>Basic</h4>
-    <p>₦5,000 - Simple edits & designs</p>
-  </div>
-  <div class="price-card">
-    <h4>Standard</h4>
-    <p>₦8,000+ - Product background, voice notes, etc.</p>
-  </div>
-  <div class="price-card">
-    <h4>Premium</h4>
-    <p>₦15,000+ - Full project design, branding, logos</p>
-  </div>
       
-<section id="payment-info" style="padding: 2rem; background-color: #f2f2f2; text-align: center; border-radius: 8px; margin: 2rem 0;">
-  <h2 style="color: #333;">💳 Payment Info</h2>
-  <p style="max-width: 600px; margin: 0 auto; font-size: 16px; color: #555;">
-   Some Prices are not listed because they vary depending on the project.  
-    For a personalized quote or to discuss your design needs, please use the contact form or reach out directly.  
-    We'll get back to you quickly with flexible options that fit your budget.
-    <br><br>
-    <em>Your vision, your price — let’s create together🤝.</em>
-  </p>
-</section>
+      <section class="testimonials">
+        <h3>What Clients Say</h3>
+        <div class="carousel">
+          <div class="testimonial active">
+            <p>"Seb Creation delivered high-quality designs quickly. Totally impressed!"</p>
+            <span>- Amanda, Lagos</span>
+          </div>
+          <div class="testimonial">
+            <p>"I love the voice notes and background edits. Highly recommended!"</p>
+            <span>- Daniel, Abuja</span>
+          </div>
+          <div class="testimonial">
+            <p>"Very professional and easy to work with. Will definitely hire again."</p>
+            <span>- Sophia, Port Harcourt</span>
+          </div>
+        </div>
+      </section>
+    </section>
 
-     <section class="faq">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-item">
-    <h4>How long does it take to deliver a project?</h4>
-    <p>Delivery time depends on the project. Simple tasks can be delivered within 24–48 hours.</p>
-  </div>
-  <div class="faq-item">
-    <h4>What file formats do you deliver?</h4>
-    <p>I deliver in JPEG, PNG, PDF, or any format you prefer.</p>
-  </div>
-  <div class="faq-item">
-    <h4>Can I request revisions?</h4>
-    <p>Yes, I allow a limited number of revisions to ensure satisfaction.</p>
-  </div>
-  <div class="faq-item">
-    <h4>How do I make payment?</h4>
-    <p>Payments can be discussed through WhatsApp or email upon agreement.</p>
-  </div>
-        <section class="cta">
-  <h2>Ready to bring your ideas to life?</h2>
-  <p>Contact Seb Creation today and let's make something amazing together.</p>
-  <a href="https://wa.me/2348053103234" class="cta-button" target="_blank">Contact Me on WhatsApp</a>
-        </section>
-<section id="contact">
+    <section id="services" class="page-section">
+      <div class="services">
+        <h3>Services I Offer</h3>
+        <ul>
+          <li>Graphic Design</li>
+          <li>Product Background Removal</li>
+          <li>Photo Editing & Retouching</li>
+          <li>Logo Design</li>
+          <li>PDF File Creation</li>
+          <li>Creating Voice Notes (Male & Female)</li>
+          <li>Removal of Unwanted Objects from Photos & Backgrounds</li>
+        </ul>
+      </div>
 
-  <div class="contact-links">
-  <h3>Contact Me</h3>
-  <a href="https://wa.me/2348053103234" class="contact-btn whatsapp" target="_blank">💬WhatsApp</a>
-  <a href="https://www.facebook.com/profile.php?id=100088580289477" class="contact-btn facebook" target="_blank">👍Facebook</a>
-  <a href="mailto:Precioussebastian70@gmail.com" class="contact-btn gmail">✉️Gmail</a>
-</div>
+      <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h4>How long does it take to deliver a project?</h4>
+          <p>Delivery time depends on the project. Simple tasks can be delivered within 24–48 hours.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What file formats do you deliver?</h4>
+          <p>I deliver in JPEG, PNG, PDF, or any format you prefer.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I request revisions?</h4>
+          <p>Yes, I allow a limited number of revisions to ensure satisfaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="page-section">
+      <h2>Portfolio</h2>
+      <div class="portfolio-gallery">
+        <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725153344.jpg" alt="Portfolio Image 1" />
+        <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725153155.jpg" alt="Portfolio Image 2" />
+        <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725152759.jpg" alt="Portfolio Image 3" />
+        <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725151830.jpg" alt="Portfolio Image 4" />
+        <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725224116.jpg" alt="Portfolio Image 5" />
+        <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725151423.jpg" alt="Portfolio Image 6" />
+      </div>
+    </section>
+
+    <section id="pricing" class="page-section">
+      <div class="pricing">
+        <h3>Pricing</h3>
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <h4>Basic</h4>
+            <p>₦5,000 - Simple edits & designs</p>
+          </div>
+          <div class="pricing-card">
+            <h4>Standard</h4>
+            <p>₦8,000+ - Product background, voice notes, etc.</p>
+          </div>
+          <div class="pricing-card">
+            <h4>Premium</h4>
+            <p>₦15,000+ - Full project design, branding, logos</p>
+          </div>
+        </div>
+      </div>
+
+      <section id="payment-info" style="padding: 2rem; background-color: #f2f2f2; text-align: center; border-radius: 8px; margin: 2rem 0;">
+        <h2 style="color: #333;">💳 Payment Info</h2>
+        <p style="max-width: 600px; margin: 0 auto; font-size: 16px; color: #555;">
+          Some Prices are not listed because they vary depending on the project. For a personalized quote, reach out directly.
+          <br><br>
+          <em>Your vision, your price — let’s create together🤝.</em>
+        </p>
+      </section>
+    </section>
+
+    <section id="contact" class="page-section">
+      <div class="contact-links">
+        <h3>Contact Me</h3>
+        <a href="https://wa.me/2348053103234" class="contact-btn whatsapp" target="_blank">💬WhatsApp</a>
+        <a href="https://www.facebook.com/profile.php?id=100088580289477" class="contact-btn facebook" target="_blank">👍Facebook</a>
+        <a href="mailto:Precioussebastian70@gmail.com" class="contact-btn gmail">✉️Gmail</a>
+      </div>
 
       <form action="https://formspree.io/f/xnnzjbvz" method="POST">
         <label for="email">Your Email</label>
         <input type="email" id="email" name="Email" placeholder="you@example.com" required />
-        
         <label for="message">Your Message</label>
         <textarea id="message" name="Message" rows="4" placeholder="Write your message here..." required></textarea>
-<button type="submit">Submit</button>
+        <button type="submit">Submit</button>
       </form>
+
+      <section class="cta">
+        <h2>Ready to bring your ideas to life?</h2>
+        <p>Contact Seb Creation today and let's make something amazing together.</p>
+        <a href="https://wa.me/2348053103234" class="cta-button" target="_blank">Contact Me on WhatsApp</a>
+      </section>
     </section>
   </main>
 
   <footer>
-  <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
+    <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
     <a href="#top" class="back-to-top">↑</a>
-  <div class="footer-nav">
-    
-    <script>
-  const backToTop = document.querySelector('.back-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTop.style.display = 'block';
-    } else {
-      backToTop.style.display = 'none';
-    }
-  })
-</script>
-    <a href="#top">Back to Top</a> |
-    <a href="#services">Services</a> |
-    <a href="#portfolio">Portfolio</a> |
-    <a href="#pricing">Pricing</a> |
-    <a href="#faq">FAQ</a> |
-    <a href="#contact">Contact</a>
-  </div>
+    <div class="footer-nav">
+      <a onclick="navigateTo('about')">About</a> |
+      <a onclick="navigateTo('services')">Services</a> |
+      <a onclick="navigateTo('portfolio')">Portfolio</a> |
+      <a onclick="navigateTo('pricing')">Pricing</a> |
+      <a onclick="navigateTo('contact')">Contact</a>
+    </div>
   </footer>
+
+  <script>
+    /* --- SPA NAVIGATION SCRIPT --- */
+    function navigateTo(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.page-section');
+      sections.forEach(sec => sec.classList.remove('active'));
+
+      // Remove active class from all nav links
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => link.classList.remove('active-link'));
+
+      // Show the targeted section
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+
+      // Add active class to clicked link
+      const targetLink = document.getElementById('link-' + sectionId);
+      if (targetLink) {
+        targetLink.classList.add('active-link');
+      }
+
+      // Scroll to top of the content
+      window.scrollTo(0, 0);
+    }
+
+    /* --- TESTIMONIAL CAROUSEL --- */
+    let current = 0;
+    const testimonials = document.querySelectorAll(".testimonial");
+    function showNextTestimonial() {
+      if (testimonials.length > 0) {
+        testimonials[current].classList.remove("active");
+        current = (current + 1) % testimonials.length;
+        testimonials[current].classList.add("active");
+      }
+    }
+    setInterval(showNextTestimonial, 4000);
+
+    /* --- BACK TO TOP SCRIPT --- */
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+  </script>
 </body>
-                                    </html>
+</html>
