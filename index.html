@@ -49,7 +49,6 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    /* ----------------------------- */
 
     header {
       background: #007bff;
@@ -86,7 +85,7 @@
       background: #0056b3;
     }
     main {
-      max-width: 700px;
+      max-width: 800px; /* Slightly wider for grid */
       margin: 2em auto;
       background: white;
       padding: 2em;
@@ -102,10 +101,70 @@
     h1, h2 {
       margin-top: 0;
     }
-    .services ul, .portfolio ul {
-      list-style-type: disc;
-      padding-left: 20px;
+
+    /* --- NEW SERVICES GRID STYLES --- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5em;
+      margin-top: 1.5em;
     }
+    .service-item {
+      background: #fdfdfd;
+      padding: 1.5em;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border: 1px solid #eef2f7;
+      transition: all 0.3s ease;
+    }
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      border-color: #007bff;
+    }
+    .service-icon { font-size: 2em; margin-bottom: 10px; display: block; }
+
+    /* --- PROCESS TIMELINE STYLES --- */
+    .process-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin: 2em 0;
+    }
+    .process-step {
+      display: flex;
+      align-items: center;
+      background: #f8fbff;
+      padding: 1.2em;
+      border-radius: 10px;
+      border-left: 5px solid #007bff;
+    }
+    .step-number {
+      font-size: 1.8em;
+      font-weight: 800;
+      color: #007bff;
+      margin-right: 20px;
+      min-width: 40px;
+    }
+
+    /* --- TOOLS BADGES --- */
+    .tools-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .tool-badge {
+      background: #eef2f7;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #0056b3;
+    }
+
     .contact-links a.contact-btn {
       padding: 0.4em 1em;
       font-size: 0.9em;
@@ -153,8 +212,7 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     .animated-heading { animation: fadeIn 1s ease-out forwards; }
-    .portfolio-gallery img { animation: zoomIn 0.8s ease-out; }
-
+    
     .portfolio-gallery { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
     .portfolio-gallery img { width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); object-fit: cover; transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .portfolio-gallery img:hover { transform: scale(1.05); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); }
@@ -202,6 +260,16 @@
       <h2>About Me</h2>
       <p>Hello! I'm Precious Sebastian. I offer professional editing and design services tailored to your needs.</p>
       
+      <h3>Professional Tools I Use</h3>
+      <div class="tools-container">
+        <span class="tool-badge">Adobe Photoshop</span>
+        <span class="tool-badge">CorelDraw</span>
+        <span class="tool-badge">Canva Pro</span>
+        <span class="tool-badge">Figma</span>
+        <span class="tool-badge">HTML/CSS/JS</span>
+        <span class="tool-badge">AI Voice Synthesis</span>
+      </div>
+
       <section class="testimonials">
         <h3>What Clients Say</h3>
         <div class="carousel">
@@ -222,17 +290,73 @@
     </section>
 
     <section id="services" class="page-section">
-      <div class="services">
-        <h3>Services I Offer</h3>
-        <ul>
-          <li>Graphic Design</li>
-          <li>Product Background Removal</li>
-          <li>Photo Editing & Retouching</li>
-          <li>Logo Design</li>
-          <li>PDF File Creation</li>
-          <li>Creating Voice Notes (Male & Female)</li>
-          <li>Removal of Unwanted Objects from Photos & Backgrounds</li>
-        </ul>
+      <h3>Services I Offer</h3>
+      <div class="services-grid">
+        <div class="service-item">
+          <span class="service-icon">🌐</span>
+          <h4>Website Design</h4>
+          <p>Designing and creating responsive, modern websites.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">🎨</span>
+          <h4>Graphic Design</h4>
+          <p>Flyers, social media posts, and visual branding.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">🖼️</span>
+          <h4>Background Removal</h4>
+          <p>Clean and professional product background isolation.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">📸</span>
+          <h4>Photo Retouching</h4>
+          <p>High-end skin retouching and color correction.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">💎</span>
+          <h4>Logo Design</h4>
+          <p>Unique logos that represent your brand identity.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">🎙️</span>
+          <h4>Voice Notes</h4>
+          <p>Professional male & female voice recordings.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">🪄</span>
+          <h4>Object Removal</h4>
+          <p>Removing unwanted items or people from any photo.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">📄</span>
+          <h4>PDF Creation</h4>
+          <p>Professional document layout and PDF formatting.</p>
+        </div>
+      </div>
+
+      <h2>How It Works</h2>
+      <div class="process-container">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-text">
+            <h4>Consultation</h4>
+            <p>We discuss your vision and requirements via WhatsApp or Email.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-text">
+            <h4>Creation</h4>
+            <p>I begin working on your project using industry-leading professional tools.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-text">
+            <h4>Review & Delivery</h4>
+            <p>You review the work, we refine it, and I deliver the final files.</p>
+          </div>
+        </div>
       </div>
 
       <div class="faq">
@@ -332,27 +456,22 @@
   <script>
     /* --- SPA NAVIGATION SCRIPT --- */
     function navigateTo(sectionId) {
-      // Hide all sections
       const sections = document.querySelectorAll('.page-section');
       sections.forEach(sec => sec.classList.remove('active'));
 
-      // Remove active class from all nav links
       const navLinks = document.querySelectorAll('nav a');
       navLinks.forEach(link => link.classList.remove('active-link'));
 
-      // Show the targeted section
       const targetSection = document.getElementById(sectionId);
       if (targetSection) {
         targetSection.classList.add('active');
       }
 
-      // Add active class to clicked link
       const targetLink = document.getElementById('link-' + sectionId);
       if (targetLink) {
         targetLink.classList.add('active-link');
       }
 
-      // Scroll to top of the content
       window.scrollTo(0, 0);
     }
 
