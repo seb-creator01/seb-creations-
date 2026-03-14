@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Seb Creation - Professional Design Studio</title>
+  <title>Seb Creation - Full-Stack Developer & Designer</title>
   
-  <meta name="description" content="Professional editing and design services by Precious Sebastian. Graphic design, photo editing, logo design and more." />
-  <meta name="keywords" content="graphic design, photo editing, logo design, background removal, voice notes, Nigeria" />
+  <meta name="description" content="Full-stack developer and designer by Precious Sebastian. Mobile apps, web development, backend systems, APIs, databases, and graphic design." />
+  <meta name="keywords" content="full-stack developer, mobile app development, backend development, API development, database design, Python, JavaScript, PHP, graphic design, Nigeria" />
   <meta name="author" content="Precious Sebastian" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="seb Creation - Premium Design Services" />
-  <meta property="og:description" content="Professional editing and design services by Precious Sebastian. Transform your ideas into stunning visuals." />
+  <meta property="og:title" content="seb Creation - Full-Stack Developer & Designer" />
+  <meta property="og:description" content="Professional full-stack development and design services by Precious Sebastian. From mobile apps to graphic design." />
   <meta property="og:url" content="https://seb-creator01.github.io/My-first-website-/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="seb Creation" />
-  <meta name="twitter:description" content="Professional editing and design services by Precious Sebastian." />
+  <meta name="twitter:title" content="seb Creation - Full-Stack Developer & Designer" />
+  <meta name="twitter:description" content="Professional full-stack development and design services by Precious Sebastian." />
   <meta name="twitter:image" content="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" />
   
-  <!-- Font Awesome for professional icons (keeping your emoji icons too) -->
+  <!-- Font Awesome for professional icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
   <style>
@@ -47,7 +47,6 @@
       overflow-x: hidden;
     }
 
-    /* Your animated background glow */
     body::before {
       content: "";
       position: fixed;
@@ -112,7 +111,6 @@
       background: transparent;
     }
 
-    /* --- YOUR HEADER GLOW --- */
     h1.animated-heading {
       font-size: 3rem;
       background: linear-gradient(to right, #fff, var(--primary-glow));
@@ -122,7 +120,15 @@
       animation: fadeIn 1s ease-out forwards;
     }
 
-    /* --- YOUR BUTTON STYLES --- */
+    h1.animated-heading span {
+      font-size: 1rem;
+      display: block;
+      background: none;
+      -webkit-text-fill-color: var(--primary-glow);
+      color: var(--primary-glow);
+      margin-top: 0.5rem;
+    }
+
     form button {
       background: linear-gradient(135deg, var(--primary-glow), var(--secondary-glow));
       color: white;
@@ -142,7 +148,7 @@
 
     /* --- YOUR GLASSMORPHISM MAIN CONTAINER --- */
     main {
-      max-width: 850px;
+      max-width: 1000px;
       margin: 2em auto;
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(12px);
@@ -162,217 +168,7 @@
       box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
     }
 
-    /* --- YOUR SERVICES GRID --- */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5em;
-      margin-top: 1.5em;
-    }
-    .service-item {
-      background: rgba(255,255,255,0.02);
-      padding: 1.5em;
-      border-radius: 12px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-    }
-    .service-item:hover {
-      transform: translateY(-8px);
-      background: rgba(255,255,255,0.06);
-      border-color: var(--primary-glow);
-      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
-    }
-    .service-icon { 
-      font-size: 2.5em; 
-      margin-bottom: 10px; 
-      display: block; 
-      filter: drop-shadow(0 0 8px var(--primary-glow));
-    }
-
-    /* --- YOUR PROCESS TIMELINE --- */
-    .process-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      margin: 2em 0;
-    }
-    .process-step {
-      display: flex;
-      align-items: center;
-      background: rgba(255,255,255,0.02);
-      padding: 1.2em;
-      border-radius: 10px;
-      border-left: 5px solid var(--primary-glow);
-    }
-    .step-number {
-      font-size: 1.8em;
-      font-weight: 800;
-      color: var(--primary-glow);
-      margin-right: 20px;
-      min-width: 40px;
-    }
-
-    /* --- YOUR TOOLS BADGES (Enhanced but preserved) --- */
-    .tools-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 10px;
-    }
-    .tool-badge {
-      background: rgba(255,255,255,0.1);
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 0.9em;
-      font-weight: 600;
-      color: var(--primary-glow);
-    }
-
-    /* --- YOUR CONTACT BUTTONS --- */
-    .contact-links a.contact-btn {
-      padding: 0.4em 1em;
-      font-size: 0.9em;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      margin: 5px;
-      color: white;
-      transition: all 0.3s ease;
-    }
-    .contact-links a.whatsapp { background-color: #25D366; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
-    .contact-links a.facebook { background-color: #3b5998; box-shadow: 0 4px 10px rgba(59, 89, 152, 0.3); }
-    .contact-links a.gmail { background-color: #ea4335; box-shadow: 0 4px 10px rgba(234, 67, 53, 0.3); }
-    .contact-links a.contact-btn:hover { opacity: 0.85; transform: scale(1.05); box-shadow: 0 0 15px rgba(255,255,255,0.2); }
-
-    /* --- YOUR FOOTER --- */
-    footer {
-      background: #05080f;
-      color: #94a3b8;
-      padding: 2em 0;
-      text-align: center;
-      margin-top: 3em;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    
-    /* --- YOUR BACK TO TOP BUTTON --- */
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 20px;
-      background: var(--primary-glow);
-      color: white;
-      padding: 10px 15px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 20px;
-      display: none;
-      z-index: 1000;
-      box-shadow: 0 0 15px var(--primary-glow);
-      transition: all 0.3s ease;
-    }
-    .back-to-top:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 25px var(--primary-glow);
-    }
-    
-    /* --- YOUR PRICING SECTION --- */
-    .pricing { margin-top: 2em; text-align: center; }
-    .pricing-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 1em; margin-top: 1em; }
-    .pricing-card { 
-      background: rgba(255,255,255,0.03); 
-      padding: 1.5em; 
-      border-radius: 10px; 
-      width: 250px; 
-      border: 1px solid rgba(255,255,255,0.05);
-      transition: 0.3s;
-    }
-    .pricing-card:hover { border-color: var(--primary-glow); box-shadow: 0 0 15px rgba(0, 210, 255, 0.15); }
-    .pricing-card h4 { margin-top: 0; color: var(--primary-glow); }
-    .pricing-card .price { font-size: 1.5em; margin: 0.5em 0; font-weight: bold; }
-
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    
-    /* --- YOUR PORTFOLIO GALLERY --- */
-    .portfolio-gallery { 
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5em;
-      justify-content: center;
-    }
-    .portfolio-gallery img { 
-      width: 100%;
-      height: 200px;
-      border-radius: 8px; 
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
-      object-fit: cover; 
-      transition: all 0.4s ease;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .portfolio-gallery img:hover { 
-      transform: scale(1.05); 
-      border-color: var(--primary-glow);
-      box-shadow: 0 0 25px rgba(0, 210, 255, 0.4); 
-    }
-
-    /* --- YOUR TESTIMONIALS --- */
-    .testimonials { text-align: center; padding: 2em; background: rgba(0, 210, 255, 0.03); border-radius: 15px; margin-top: 1.5em; }
-    .testimonial { display: none; padding: 1em; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); }
-    .testimonial.active { display: block; }
-    
-    /* --- YOUR FAQ --- */
-    .faq-item h4 { color: var(--primary-glow); }
-    .faq-item p { color: #cbd5e1; }
-    
-    /* --- YOUR CTA SECTION --- */
-    .cta { 
-      background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(0, 210, 255, 0.2)); 
-      color: white; 
-      text-align: center; 
-      padding: 2.5em 1em; 
-      border-radius: 15px; 
-      margin-top: 3em; 
-      border: 1px solid var(--primary-glow);
-      box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
-    }
-    .cta-button { 
-      display: inline-block; 
-      margin-top: 1em; 
-      background: white; 
-      color: #0b0f1a; 
-      padding: 0.8em 1.5em; 
-      text-decoration: none; 
-      border-radius: 5px; 
-      font-weight: bold; 
-      transition: 0.3s;
-    }
-    .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 20px white; }
-    
-    .footer-nav a { color: #94a3b8; }
-    .footer-nav a:hover { color: var(--primary-glow); }
-
-    /* --- YOUR INPUT STYLES --- */
-    input, textarea {
-      background: rgba(255,255,255,0.05) !important;
-      border: 1px solid rgba(255,255,255,0.1) !important;
-      color: white !important;
-      padding: 10px;
-      border-radius: 5px;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: var(--primary-glow) !important;
-      box-shadow: 0 0 10px var(--primary-glow);
-    }
-
-    /* ========== NEW PROFESSIONAL ENHANCEMENTS ========== */
-    /* These additions complement your existing design without removing anything */
-
-    /* Section headers with subtle underline */
+    /* Section headers with glow */
     h2 {
       position: relative;
       display: inline-block;
@@ -391,7 +187,7 @@
       box-shadow: 0 0 10px var(--primary-glow);
     }
 
-    /* Stats counter section (new, non-intrusive) */
+    /* Stats counter */
     .stats-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -426,44 +222,133 @@
       margin-top: 0.5rem;
     }
 
-    /* Skill bars (professional touch) */
-    .skills-container {
+    /* --- ENHANCED SKILLS SECTION FOR FULL-STACK --- */
+    .skills-category {
       margin: 2rem 0;
     }
     
-    .skill-item {
+    .skills-category h3 {
+      color: var(--primary-glow);
       margin-bottom: 1rem;
+      font-size: 1.3rem;
     }
     
-    .skill-info {
-      display: flex;
-      justify-content: space-between;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    
+    .skill-card {
+      background: rgba(255,255,255,0.02);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary-glow);
+      box-shadow: 0 5px 15px rgba(0, 210, 255, 0.2);
+    }
+    
+    .skill-icon {
+      font-size: 2rem;
+      color: var(--primary-glow);
+      margin-bottom: 0.5rem;
+    }
+    
+    .skill-name {
+      font-weight: bold;
       margin-bottom: 0.3rem;
+    }
+    
+    .skill-level {
+      font-size: 0.8rem;
       color: #94a3b8;
     }
     
-    .skill-bar {
-      height: 6px;
+    /* Skill bars */
+    .skill-bar-container {
+      margin-top: 0.5rem;
+      width: 100%;
+      height: 4px;
       background: rgba(255,255,255,0.1);
-      border-radius: 3px;
-      overflow: hidden;
+      border-radius: 2px;
     }
     
-    .skill-progress {
+    .skill-bar-fill {
       height: 100%;
       background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow));
-      border-radius: 3px;
+      border-radius: 2px;
       width: 0;
       transition: width 1s ease;
-      box-shadow: 0 0 10px var(--primary-glow);
     }
 
-    /* Project tags */
+    /* --- SERVICES TABS --- */
+    .services-tabs {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .service-tab {
+      background: rgba(255,255,255,0.03);
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .service-tab:hover,
+    .service-tab.active {
+      background: var(--primary-glow);
+      color: var(--dark-bg);
+      border-color: var(--primary-glow);
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+    
+    /* --- SERVICES GRID --- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+      margin-top: 1.5em;
+    }
+    
+    .service-item {
+      background: rgba(255,255,255,0.02);
+      padding: 1.5em;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .service-item:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.06);
+      border-color: var(--primary-glow);
+      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+    }
+    
+    .service-icon { 
+      font-size: 2.5em; 
+      margin-bottom: 10px; 
+      display: block; 
+      filter: drop-shadow(0 0 8px var(--primary-glow));
+    }
+    
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-top: 0.5rem;
+      justify-content: center;
     }
     
     .project-tag {
@@ -475,44 +360,420 @@
       border: 1px solid rgba(0, 210, 255, 0.2);
     }
 
-    /* Newsletter signup (subtle addition) */
-    .newsletter {
+    /* Development project showcase */
+    .dev-projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .dev-project-card {
       background: rgba(255,255,255,0.02);
-      padding: 2rem;
-      border-radius: 10px;
-      margin-top: 2rem;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .dev-project-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-glow);
+      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+    }
+    
+    .dev-project-header {
+      background: linear-gradient(135deg, rgba(0,210,255,0.1), rgba(58,123,213,0.1));
+      padding: 1.5rem;
       text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .dev-project-header i {
+      font-size: 3rem;
+      color: var(--primary-glow);
+    }
+    
+    .dev-project-body {
+      padding: 1.5rem;
+    }
+    
+    .dev-project-body h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--primary-glow);
+    }
+    
+    .dev-project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .tech-badge {
+      background: rgba(255,255,255,0.05);
+      padding: 0.2rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    /* --- YOUR PROCESS TIMELINE --- */
+    .process-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin: 2em 0;
+    }
+    .process-step {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.02);
+      padding: 1.2em;
+      border-radius: 10px;
+      border-left: 5px solid var(--primary-glow);
+    }
+    .step-number {
+      font-size: 1.8em;
+      font-weight: 800;
+      color: var(--primary-glow);
+      margin-right: 20px;
+      min-width: 40px;
+    }
+
+    /* --- YOUR CONTACT BUTTONS --- */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+    
+    .contact-links a.contact-btn {
+      padding: 0.6em 1.2em;
+      font-size: 0.9em;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .contact-links a.whatsapp { background-color: #25D366; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
+    .contact-links a.facebook { background-color: #3b5998; box-shadow: 0 4px 10px rgba(59, 89, 152, 0.3); }
+    .contact-links a.gmail { background-color: #ea4335; box-shadow: 0 4px 10px rgba(234, 67, 53, 0.3); }
+    .contact-links a.github { background-color: #333; box-shadow: 0 4px 10px rgba(51, 51, 51, 0.3); }
+    .contact-links a.linkedin { background-color: #0077b5; box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3); }
+    .contact-links a.contact-btn:hover { opacity: 0.85; transform: scale(1.05); box-shadow: 0 0 15px rgba(255,255,255,0.2); }
+
+    /* --- PRICING SECTION (UPDATED - YOUR ORIGINAL STYLE) --- */
+    .pricing { 
+      margin-top: 2em; 
+      text-align: center; 
+    }
+    
+    .pricing-intro {
+      text-align: center;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .pricing-cards { 
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 1.5em; 
+      margin-top: 1em; 
+    }
+    
+    .pricing-card { 
+      background: rgba(255,255,255,0.03); 
+      padding: 1.8em 1.5em; 
+      border-radius: 15px; 
+      width: 280px; 
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow));
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .pricing-card:hover::before {
+      transform: translateX(0);
+    }
+    
+    .pricing-card:hover { 
+      border-color: var(--primary-glow); 
+      box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15); 
+      transform: translateY(-5px);
+    }
+    
+    .pricing-card h4 { 
+      margin-top: 0; 
+      color: var(--primary-glow);
+      font-size: 1.3rem;
+    }
+    
+    .pricing-card .price { 
+      font-size: 1.8em; 
+      margin: 0.7em 0; 
+      font-weight: bold;
+      background: linear-gradient(135deg, #fff, var(--primary-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .pricing-card p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* Custom Quote Section */
+    .quote-section {
+      padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(58,123,213,0.05));
+      text-align: center;
+      border-radius: 20px;
+      margin: 3rem 0 1rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .quote-section h2 {
+      color: var(--primary-glow);
+      margin-bottom: 1rem;
+    }
+    
+    .quote-section p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      color: #cbd5e1;
+    }
+    
+    .quote-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .quote-btn {
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .quote-btn.whatsapp {
+      background-color: #25D366;
+      color: white;
+    }
+    
+    .quote-btn.email {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .quote-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    .quote-btn.whatsapp:hover {
+      box-shadow: 0 0 20px #25D366;
+    }
+    
+    .quote-btn.email:hover {
+      border-color: var(--primary-glow);
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+    
+    .quote-footer {
+      margin-top: 1.5rem;
+      color: var(--primary-glow);
+      font-style: italic;
+    }
+
+    /* --- YOUR FOOTER --- */
+    footer {
+      background: #05080f;
+      color: #94a3b8;
+      padding: 2em 0;
+      text-align: center;
+      margin-top: 3em;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    /* --- YOUR BACK TO TOP BUTTON --- */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background: var(--primary-glow);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 0 15px var(--primary-glow);
+      transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px var(--primary-glow);
+    }
+    
+    /* --- PORTFOLIO GALLERY --- */
+    .portfolio-gallery { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .portfolio-gallery img { 
+      width: 100%;
+      height: 200px;
+      border-radius: 8px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+      object-fit: cover; 
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .portfolio-gallery img:hover { 
+      transform: scale(1.05); 
+      border-color: var(--primary-glow);
+      box-shadow: 0 0 25px rgba(0, 210, 255, 0.4); 
+    }
+
+    /* --- TESTIMONIALS --- */
+    .testimonials { 
+      text-align: center; 
+      padding: 2em; 
+      background: rgba(0, 210, 255, 0.03); 
+      border-radius: 15px; 
+      margin-top: 2em; 
+    }
+    
+    .testimonial { 
+      display: none; 
+      padding: 1.5em; 
+      background: rgba(255,255,255,0.02); 
+      border-radius: 10px; 
       border: 1px solid rgba(255,255,255,0.05);
     }
+    .testimonial.active { display: block; }
     
-    .newsletter-form {
-      display: flex;
-      gap: 0.5rem;
-      max-width: 400px;
-      margin: 1rem auto 0;
+    .testimonial p {
+      font-size: 1.1rem;
+      font-style: italic;
     }
     
-    .newsletter-form input {
-      flex: 1;
+    .testimonial span {
+      color: var(--primary-glow);
+      font-weight: bold;
+    }
+    
+    /* --- FAQ --- */
+    .faq-item { 
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: rgba(255,255,255,0.02);
+      border-radius: 8px;
+    }
+    
+    .faq-item h4 { 
+      color: var(--primary-glow);
+      margin-top: 0;
+    }
+    
+    .faq-item p { 
+      color: #cbd5e1;
       margin-bottom: 0;
     }
     
-    .newsletter-form button {
-      margin-top: 0;
-      white-space: nowrap;
-    }
-
-    /* Loading animation for images */
-    .portfolio-gallery img {
-      opacity: 0;
-      animation: imageLoad 0.5s ease forwards;
+    /* --- CTA SECTION --- */
+    .cta { 
+      background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(0, 210, 255, 0.2)); 
+      color: white; 
+      text-align: center; 
+      padding: 2.5em 1em; 
+      border-radius: 15px; 
+      margin-top: 3em; 
+      border: 1px solid var(--primary-glow);
+      box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
     }
     
-    @keyframes imageLoad {
-      to { opacity: 1; }
+    .cta-button { 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1em; 
+      background: white; 
+      color: #0b0f1a; 
+      padding: 0.8em 1.5em; 
+      text-decoration: none; 
+      border-radius: 5px; 
+      font-weight: bold; 
+      transition: 0.3s;
+    }
+    .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 20px white; }
+    
+    .footer-nav a { 
+      color: #94a3b8;
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+    .footer-nav a:hover { color: var(--primary-glow); }
+
+    /* --- INPUT STYLES --- */
+    input, textarea, select {
+      background: rgba(255,255,255,0.05) !important;
+      border: 1px solid rgba(255,255,255,0.1) !important;
+      color: white !important;
+      padding: 12px;
+      border-radius: 5px;
+      width: 100%;
+      margin-bottom: 15px;
+      font-family: inherit;
+    }
+    
+    select option {
+      background: var(--dark-bg);
+      color: white;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--primary-glow) !important;
+      box-shadow: 0 0 10px var(--primary-glow);
     }
 
-    /* Smooth scroll progress indicator */
+    /* Scroll progress */
     .scroll-progress {
       position: fixed;
       top: 0;
@@ -525,52 +786,36 @@
       box-shadow: 0 0 10px var(--primary-glow);
     }
 
-    /* Enhanced mobile menu */
-    @media (max-width: 768px) {
-      nav {
-        padding: 0.5em;
-      }
-      
-      nav a {
-        margin: 0 8px;
-        font-size: 0.9rem;
-      }
-      
-      .newsletter-form {
-        flex-direction: column;
-      }
-      
-      .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    /* Responsive */
+    @media (max-width: 1024px) { 
+      main { max-width: 90%; } 
     }
-
+    
+    @media (max-width: 768px) { 
+      nav a { margin: 0 8px; font-size: 0.9rem; }
+      h1.animated-heading { font-size: 2rem; }
+      h1.animated-heading span { font-size: 0.9rem; }
+      .services-tabs { justify-content: center; }
+      .pricing-card { width: 100%; max-width: 350px; }
+    }
+    
     @media (max-width: 480px) {
-      h1.animated-heading {
-        font-size: 2rem;
-      }
-      
-      nav a {
-        margin: 0 5px;
-        font-size: 0.8rem;
-      }
-      
-      .stats-container {
-        grid-template-columns: 1fr;
-      }
+      nav a { margin: 0 5px; font-size: 0.8rem; }
+      .contact-links a.contact-btn { width: 100%; justify-content: center; }
+      .quote-buttons { flex-direction: column; }
+      .quote-btn { width: 100%; justify-content: center; }
     }
-
-    /* Your existing media queries */
-    @media (max-width: 1024px) { main { max-width: 90%; } .pricing-card { width: 45%; } }
-    @media (max-width: 768px) { .pricing-card { width: 100%; } }
   </style>
 </head>
 <body id="top">
-  <!-- Scroll progress indicator (new) -->
+  <!-- Scroll progress indicator -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
   <header>
-    <h1 class="animated-heading">seb Creation</h1>
+    <h1 class="animated-heading">
+      seb Creation
+      <span>Full-Stack Developer & Designer</span>
+    </h1>
   </header>
 
   <nav id="main-nav">
@@ -584,203 +829,408 @@
   <main>
     <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" alt="Profile Photo" class="profile" />
 
+    <!-- ABOUT SECTION -->
     <section id="about" class="page-section active">
       <h2>About Me</h2>
-      <p>Hello! I'm Precious Sebastian. I offer professional editing and design services tailored to your needs.</p>
+      <p>Hello! I'm <strong>Precious Sebastian</strong> – a passionate <strong>Full-Stack Developer</strong> and <strong>Creative Designer</strong>. I build complete digital solutions from frontend to backend, and bring ideas to life with stunning visuals.</p>
       
-      <!-- New: Stats section (professional credibility) -->
+      <!-- Stats section -->
       <div class="stats-container">
         <div class="stat-item">
-          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-number" data-target="25">0</div>
           <div class="stat-label">Projects Completed</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-target="30">0</div>
+          <div class="stat-number" data-target="15">0</div>
           <div class="stat-label">Happy Clients</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-target="2">0</div>
+          <div class="stat-number" data-target="3">0</div>
           <div class="stat-label">Years Experience</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-target="24">0</div>
-          <div class="stat-label">Hour Response</div>
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-label">Technologies</div>
         </div>
       </div>
 
-      <!-- New: Skills section -->
-      <div class="skills-container">
-        <h3>Professional Skills</h3>
-        <div class="skill-item">
-          <div class="skill-info">
-            <span>Graphic Design</span>
-            <span>95%</span>
+      <!-- Full-Stack Skills Categories -->
+      <div class="skills-category">
+        <h3><i class="fas fa-code"></i> Frontend Development</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <div class="skill-name">HTML5</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="95"></div></div>
           </div>
-          <div class="skill-bar">
-            <div class="skill-progress" data-width="95"></div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <div class="skill-name">CSS3</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-js"></i></div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="85"></div></div>
           </div>
         </div>
-        <div class="skill-item">
-          <div class="skill-info">
-            <span>Photo Editing</span>
-            <span>90%</span>
+      </div>
+
+      <div class="skills-category">
+        <h3><i class="fas fa-server"></i> Backend Development</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <div class="skill-name">Python</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="80"></div></div>
           </div>
-          <div class="skill-bar">
-            <div class="skill-progress" data-width="90"></div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-php"></i></div>
+            <div class="skill-name">PHP</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <div class="skill-name">Databases</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="80"></div></div>
           </div>
         </div>
-        <div class="skill-item">
-          <div class="skill-info">
-            <span>Web Design</span>
-            <span>85%</span>
+      </div>
+
+      <div class="skills-category">
+        <h3><i class="fas fa-mobile-alt"></i> Mobile & API</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+            <div class="skill-name">Mobile Apps</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="75"></div></div>
           </div>
-          <div class="skill-bar">
-            <div class="skill-progress" data-width="85"></div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-plug"></i></div>
+            <div class="skill-name">API Development</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+            <div class="skill-name">Servers</div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" data-width="70"></div></div>
           </div>
         </div>
       </div>
       
+      <!-- Testimonials -->
       <section class="testimonials">
         <h3>What Clients Say</h3>
         <div class="carousel">
           <div class="testimonial active">
-            <p>"Seb Creation delivered high-quality designs quickly. Totally impressed!"</p>
-            <span>- Amanda, Lagos</span>
+            <p>"Seb built a complete mobile app with backend for my business. Amazing work!"</p>
+            <span>- Michael, Lagos</span>
           </div>
           <div class="testimonial">
-            <p>"I love the voice notes and background edits. Highly recommended!"</p>
-            <span>- Daniel, Abuja</span>
+            <p>"Full-stack development AND design? Sebastian is a rare talent. Highly recommended!"</p>
+            <span>- Chioma, Abuja</span>
           </div>
           <div class="testimonial">
-            <p>"Very professional and easy to work with. Will definitely hire again."</p>
-            <span>- Sophia, Port Harcourt</span>
+            <p>"The API integration was flawless. Very professional and timely delivery."</p>
+            <span>- Tunde, Port Harcourt</span>
           </div>
         </div>
       </section>
     </section>
 
+    <!-- SERVICES SECTION -->
     <section id="services" class="page-section">
-      <h3>Services I Offer</h3>
-      <div class="services-grid">
-        <div class="service-item">
+      <h2>What I Can Do For You</h2>
+      
+      <!-- Service tabs -->
+      <div class="services-tabs">
+        <div class="service-tab active" onclick="filterServices('all')">All Services</div>
+        <div class="service-tab" onclick="filterServices('dev')">Development</div>
+        <div class="service-tab" onclick="filterServices('design')">Design</div>
+      </div>
+
+      <!-- Development Projects Showcase -->
+      <div class="dev-projects">
+        <div class="dev-project-card">
+          <div class="dev-project-header">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="dev-project-body">
+            <h4>Mobile App Development</h4>
+            <p>Cross-platform mobile applications for iOS and Android</p>
+            <div class="dev-project-tech">
+              <span class="tech-badge">React Native</span>
+              <span class="tech-badge">Flutter</span>
+              <span class="tech-badge">Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-project-card">
+          <div class="dev-project-header">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="dev-project-body">
+            <h4>Backend Systems</h4>
+            <p>Robust server-side applications and database architecture</p>
+            <div class="dev-project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-project-card">
+          <div class="dev-project-header">
+            <i class="fas fa-plug"></i>
+          </div>
+          <div class="dev-project-body">
+            <h4>API Development</h4>
+            <p>RESTful APIs and third-party integrations</p>
+            <div class="dev-project-tech">
+              <span class="tech-badge">REST</span>
+              <span class="tech-badge">JSON</span>
+              <span class="tech-badge">Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- All Services Grid -->
+      <div class="services-grid" id="allServices">
+        <!-- Development Services -->
+        <div class="service-item" data-category="dev">
+          <span class="service-icon"><i class="fas fa-mobile-alt"></i></span>
+          <h4>Mobile Apps</h4>
+          <p>iOS & Android app development</p>
+          <div class="project-tags">
+            <span class="project-tag">React Native</span>
+            <span class="project-tag">Flutter</span>
+          </div>
+        </div>
+        <div class="service-item" data-category="dev">
+          <span class="service-icon"><i class="fab fa-python"></i></span>
+          <h4>Python Development</h4>
+          <p>Web apps, automation, scripts</p>
+          <div class="project-tags">
+            <span class="project-tag">Django</span>
+            <span class="project-tag">Flask</span>
+          </div>
+        </div>
+        <div class="service-item" data-category="dev">
+          <span class="service-icon"><i class="fab fa-php"></i></span>
+          <h4>PHP Development</h4>
+          <p>Dynamic websites and web apps</p>
+          <div class="project-tags">
+            <span class="project-tag">Laravel</span>
+            <span class="project-tag">WordPress</span>
+          </div>
+        </div>
+        <div class="service-item" data-category="dev">
+          <span class="service-icon"><i class="fas fa-database"></i></span>
+          <h4>Database Design</h4>
+          <p>MySQL, PostgreSQL, MongoDB</p>
+          <div class="project-tags">
+            <span class="project-tag">SQL</span>
+            <span class="project-tag">NoSQL</span>
+          </div>
+        </div>
+        <div class="service-item" data-category="dev">
+          <span class="service-icon"><i class="fas fa-server"></i></span>
+          <h4>Server Management</h4>
+          <p>Deployment, hosting, maintenance</p>
+          <div class="project-tags">
+            <span class="project-tag">AWS</span>
+            <span class="project-tag">cPanel</span>
+          </div>
+        </div>
+        <div class="service-item" data-category="dev">
+          <span class="service-icon"><i class="fas fa-plug"></i></span>
+          <h4>API Integration</h4>
+          <p>RESTful APIs, third-party services</p>
+          <div class="project-tags">
+            <span class="project-tag">Payment</span>
+            <span class="project-tag">Maps</span>
+          </div>
+        </div>
+        <div class="service-item" data-category="dev">
+          <span class="service-icon"><i class="fab fa-js"></i></span>
+          <h4>JavaScript</h4>
+          <p>Frontend & backend (Node.js)</p>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Node.js</span>
+          </div>
+        </div>
+
+        <!-- Design Services (Your Original) -->
+        <div class="service-item" data-category="design">
           <span class="service-icon">🌐</span>
           <h4>Website Design</h4>
-          <p>Designing and creating responsive, modern websites.</p>
-          <!-- New: Project tags -->
+          <p>Responsive, modern websites</p>
           <div class="project-tags">
             <span class="project-tag">HTML/CSS</span>
             <span class="project-tag">Responsive</span>
           </div>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-category="design">
           <span class="service-icon">🎨</span>
           <h4>Graphic Design</h4>
-          <p>Flyers, social media posts, and visual branding.</p>
+          <p>Flyers, social media, branding</p>
           <div class="project-tags">
             <span class="project-tag">Photoshop</span>
             <span class="project-tag">Illustrator</span>
           </div>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-category="design">
           <span class="service-icon">🖼️</span>
           <h4>Background Removal</h4>
-          <p>Clean and professional product background isolation.</p>
+          <p>Product photo isolation</p>
           <div class="project-tags">
             <span class="project-tag">Precision</span>
-            <span class="project-tag">Quick</span>
           </div>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-category="design">
           <span class="service-icon">📸</span>
           <h4>Photo Retouching</h4>
-          <p>High-end skin retouching and color correction.</p>
+          <p>Skin retouching, color correction</p>
           <div class="project-tags">
             <span class="project-tag">Retouch</span>
-            <span class="project-tag">Color Grading</span>
           </div>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-category="design">
           <span class="service-icon">💎</span>
           <h4>Logo Design</h4>
-          <p>Unique logos that represent your brand identity.</p>
+          <p>Unique brand identities</p>
           <div class="project-tags">
             <span class="project-tag">Branding</span>
-            <span class="project-tag">Vector</span>
           </div>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-category="design">
           <span class="service-icon">🎙️</span>
           <h4>Voice Notes</h4>
-          <p>Professional male & female voice recordings.</p>
+          <p>Professional voice recordings</p>
           <div class="project-tags">
             <span class="project-tag">Male/Female</span>
-            <span class="project-tag">Studio Quality</span>
           </div>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-category="design">
           <span class="service-icon">🪄</span>
           <h4>Object Removal</h4>
-          <p>Removing unwanted items or people from any photo.</p>
+          <p>Remove unwanted items</p>
           <div class="project-tags">
             <span class="project-tag">Clone Tool</span>
-            <span class="project-tag">AI Enhanced</span>
           </div>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-category="design">
           <span class="service-icon">📄</span>
           <h4>PDF Creation</h4>
-          <p>Professional document layout and PDF formatting.</p>
+          <p>Professional documents</p>
           <div class="project-tags">
             <span class="project-tag">Layout</span>
-            <span class="project-tag">Print Ready</span>
           </div>
         </div>
       </div>
 
+      <!-- How It Works -->
       <h2>How It Works</h2>
       <div class="process-container">
         <div class="process-step">
           <div class="step-number">01</div>
           <div class="step-text">
             <h4>Consultation</h4>
-            <p>We discuss your vision and requirements via WhatsApp or Email.</p>
+            <p>We discuss your project requirements via WhatsApp or Email.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-number">02</div>
           <div class="step-text">
-            <h4>Creation</h4>
-            <p>I begin working on your project using industry-leading professional tools.</p>
+            <h4>Development & Design</h4>
+            <p>I build your solution using modern technologies and best practices.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-number">03</div>
           <div class="step-text">
-            <h4>Review & Delivery</h4>
-            <p>You review the work, we refine it, and I deliver the final files.</p>
+            <h4>Testing & Delivery</h4>
+            <p>You review, I refine, and deliver the final product.</p>
           </div>
         </div>
       </div>
 
+      <!-- FAQ -->
       <div class="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
-          <h4>How long does it take to deliver a project?</h4>
-          <p>Delivery time depends on the project. Simple tasks can be delivered within 24–48 hours.</p>
+          <h4>Can you build both frontend and backend?</h4>
+          <p>Yes! I'm a full-stack developer - I handle everything from database design to user interface.</p>
         </div>
         <div class="faq-item">
-          <h4>What file formats do you deliver?</h4>
-          <p>I deliver in JPEG, PNG, PDF, or any format you prefer.</p>
+          <h4>Do you offer maintenance after delivery?</h4>
+          <p>Absolutely. I provide support and maintenance packages for all projects.</p>
         </div>
         <div class="faq-item">
-          <h4>Can I request revisions?</h4>
-          <p>Yes, I allow a limited number of revisions to ensure satisfaction.</p>
+          <h4>What technologies do you specialize in?</h4>
+          <p>JavaScript, Python, PHP, mobile development, databases, and modern frameworks.</p>
         </div>
       </div>
     </section>
 
+    <!-- PORTFOLIO SECTION -->
     <section id="portfolio" class="page-section">
-      <h2>Portfolio</h2>
+      <h2>My Work</h2>
+      
+      <!-- Development Projects -->
+      <div class="dev-projects">
+        <div class="dev-project-card">
+          <div class="dev-project-header">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="dev-project-body">
+            <h4>E-Commerce App</h4>
+            <p>Full-stack mobile shopping application</p>
+            <div class="dev-project-tech">
+              <span class="tech-badge">React Native</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-project-card">
+          <div class="dev-project-header">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="dev-project-body">
+            <h4>Task Management API</h4>
+            <p>RESTful API with authentication</p>
+            <div class="dev-project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-project-card">
+          <div class="dev-project-header">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="dev-project-body">
+            <h4>Social Platform</h4>
+            <p>PHP-based community website</p>
+            <div class="dev-project-tech">
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design Portfolio -->
+      <h3>Design Portfolio</h3>
       <div class="portfolio-gallery">
         <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725153344.jpg" alt="Portfolio Image 1" loading="lazy" />
         <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725153155.jpg" alt="Portfolio Image 2" loading="lazy" />
@@ -791,71 +1241,122 @@
       </div>
     </section>
 
+    <!-- PRICING SECTION (UPDATED - Your original style) -->
     <section id="pricing" class="page-section">
       <div class="pricing">
-        <h3>Pricing</h3>
+        <h2>Pricing</h2>
+        <p class="pricing-intro">
+          <i class="fas fa-handshake" style="color: var(--primary-glow); margin-right: 0.5rem;"></i>
+          Every project is unique. Let's discuss your needs and find a price that works for both of us.
+        </p>
+        
         <div class="pricing-cards">
+          <!-- Design Services Card -->
           <div class="pricing-card">
-            <h4>Basic</h4>
-            <p>₦5,000 - Simple edits & designs</p>
+            <h4>🎨 Design Services</h4>
+            <div class="price">₦5,000 - ₦15,000+</div>
+            <p>Graphic design, photo editing, logos, voice notes, and more</p>
+            <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
+              <span class="project-tag">Flyers</span>
+              <span class="project-tag">Background Removal</span>
+              <span class="project-tag">Retouching</span>
+            </div>
           </div>
+          
+          <!-- Development Services Card -->
           <div class="pricing-card">
-            <h4>Standard</h4>
-            <p>₦8,000+ - Product background, voice notes, etc.</p>
+            <h4>💻 Web & Development</h4>
+            <div class="price">Let's Talk</div>
+            <p>Websites, mobile apps, backend systems, APIs, databases</p>
+            <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
+              <span class="project-tag">Custom Quote</span>
+              <span class="project-tag">Based on Scope</span>
+            </div>
           </div>
+          
+          <!-- Full Project Card -->
           <div class="pricing-card">
-            <h4>Premium</h4>
-            <p>₦15,000+ - Full project design, branding, logos</p>
+            <h4>🚀 Full Project</h4>
+            <div class="price">Negotiable</div>
+            <p>Complete solutions from design to deployment - frontend to backend</p>
+            <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
+              <span class="project-tag">🤝 Flexible</span>
+              <span class="project-tag">Let's Discuss</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <section id="payment-info" style="padding: 2rem; background-color: rgba(255,255,255,0.05); text-align: center; border-radius: 8px; margin: 2rem 0; border: 1px dashed rgba(255,255,255,0.2);">
-        <h2 style="color: var(--primary-glow);">💳 Payment Info</h2>
-        <p style="max-width: 600px; margin: 0 auto; font-size: 16px; color: #cbd5e1;">
-          Some Prices are not listed because they vary depending on the project. For a personalized quote, reach out directly.
-          <br><br>
-          <em>Your vision, your price — let’s create together🤝.</em>
+      <!-- Custom Quote Section (Enhanced version of your original payment-info) -->
+      <div class="quote-section">
+        <h2><i class="fas fa-comment-dollar"></i> Get a Custom Quote</h2>
+        <p>
+          Prices vary depending on project complexity, requirements, and timeline. 
+          I believe in fair pricing that works for both of us. 
+          <strong>Let's talk about your project and budget!</strong>
         </p>
-      </section>
+        
+        <div class="quote-buttons">
+          <a href="https://wa.me/2348053103234" class="quote-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Discuss on WhatsApp
+          </a>
+          <a href="mailto:Precioussebastian70@gmail.com" class="quote-btn email" target="_blank">
+            <i class="far fa-envelope"></i> Send Email
+          </a>
+        </div>
+        
+        <div class="quote-footer">
+          <i class="fas fa-handshake"></i> Your budget, your project — let's find a middle ground
+        </div>
+      </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section id="contact" class="page-section">
+      <h2>Let's Connect</h2>
+      
       <div class="contact-links">
-        <h3>Contact Me</h3>
         <a href="https://wa.me/2348053103234" class="contact-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         <a href="https://www.facebook.com/profile.php?id=100088580289477" class="contact-btn facebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
         <a href="mailto:Precioussebastian70@gmail.com" class="contact-btn gmail"><i class="far fa-envelope"></i> Gmail</a>
+        <a href="#" class="contact-btn github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#" class="contact-btn linkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
       </div>
 
+      <!-- Contact Form with Budget Field -->
       <form action="https://formspree.io/f/xnnzjbvz" method="POST" style="margin-top: 2em;">
         <label for="email">Your Email</label>
         <input type="email" id="email" name="Email" placeholder="you@example.com" required />
-        <label for="message">Your Message</label>
-        <textarea id="message" name="Message" rows="4" placeholder="Write your message here..." required></textarea>
+        
+        <label for="budget">Estimated Budget (Optional)</label>
+        <select id="budget" name="Budget">
+          <option value="" disabled selected>Select a range...</option>
+          <option>₦5,000 - ₦15,000 (Simple design)</option>
+          <option>₦15,000 - ₦50,000 (Website / small app)</option>
+          <option>₦50,000 - ₦150,000 (Full-stack project)</option>
+          <option>₦150,000+ (Complex / large project)</option>
+          <option>Not sure - let's discuss</option>
+        </select>
+        
+        <label for="message">Tell me about your project</label>
+        <textarea id="message" name="Message" rows="4" placeholder="Describe your project idea... (mobile app, website, backend, design, etc.)" required></textarea>
+        
         <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
       </form>
 
-      <!-- New: Newsletter signup -->
-      <div class="newsletter">
-        <h3>Stay Updated</h3>
-        <p>Get design tips and exclusive offers</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
-          <input type="email" placeholder="Your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-
+      <!-- CTA Section -->
       <section class="cta">
-        <h2>Ready to bring your ideas to life?</h2>
-        <p>Contact Seb Creation today and let's make something amazing together.</p>
-        <a href="https://wa.me/2348053103234" class="cta-button" target="_blank"><i class="fab fa-whatsapp"></i> Contact Me on WhatsApp</a>
+        <h2>Ready to build something amazing?</h2>
+        <p>Full-stack development + creative design - all in one place. Let's bring your ideas to life!</p>
+        <a href="https://wa.me/2348053103234" class="cta-button" target="_blank">
+          <i class="fab fa-whatsapp"></i> Start a Conversation
+        </a>
       </section>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 seb Creation | Email: precioussebastian70@gmail.com</p>
+    <p>© 2025 seb Creation | Full-Stack Developer & Designer | precioussebastian70@gmail.com</p>
     <a href="#top" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     <div class="footer-nav">
       <a onclick="navigateTo('about')">About</a> |
@@ -867,7 +1368,7 @@
   </footer>
 
   <script>
-    /* --- YOUR EXISTING SPA NAVIGATION (COMPLETELY PRESERVED) --- */
+    /* --- YOUR EXISTING SPA NAVIGATION --- */
     function navigateTo(sectionId) {
       const sections = document.querySelectorAll('.page-section');
       sections.forEach(sec => sec.classList.remove('active'));
@@ -885,12 +1386,16 @@
         targetLink.classList.add('active-link');
       }
 
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
 
-    /* --- YOUR TESTIMONIAL CAROUSEL (PRESERVED) --- */
+    /* --- TESTIMONIAL CAROUSEL --- */
     let current = 0;
     const testimonials = document.querySelectorAll(".testimonial");
+    
     function showNextTestimonial() {
       if (testimonials.length > 0) {
         testimonials[current].classList.remove("active");
@@ -898,10 +1403,14 @@
         testimonials[current].classList.add("active");
       }
     }
-    setInterval(showNextTestimonial, 4000);
+    
+    if (testimonials.length > 0) {
+      setInterval(showNextTestimonial, 4000);
+    }
 
-    /* --- YOUR BACK TO TOP SCRIPT (PRESERVED AND ENHANCED) --- */
+    /* --- BACK TO TOP --- */
     const backToTop = document.querySelector('.back-to-top');
+    
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         backToTop.style.display = 'block';
@@ -910,10 +1419,9 @@
       }
     });
 
-    /* ========== NEW PROFESSIONAL ENHANCEMENTS ========== */
-
-    // 1. Scroll Progress Indicator
+    /* --- SCROLL PROGRESS --- */
     const scrollProgress = document.getElementById('scrollProgress');
+    
     window.addEventListener('scroll', () => {
       const scrollPx = document.documentElement.scrollTop;
       const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -921,79 +1429,73 @@
       scrollProgress.style.width = scrolled + '%';
     });
 
-    // 2. Animated Stats Counter
-    function animateStats() {
-      const stats = document.querySelectorAll('.stat-number');
-      stats.forEach(stat => {
-        const target = parseInt(stat.getAttribute('data-target'));
-        const current = parseInt(stat.innerText);
-        if (current < target) {
-          const increment = Math.ceil(target / 50); // Smooth animation
-          const newValue = Math.min(current + increment, target);
-          stat.innerText = newValue;
+    /* --- SERVICE FILTERING --- */
+    function filterServices(category) {
+      const services = document.querySelectorAll('.service-item');
+      const tabs = document.querySelectorAll('.service-tab');
+      
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      services.forEach(service => {
+        if (category === 'all' || service.dataset.category === category) {
+          service.style.display = 'block';
+        } else {
+          service.style.display = 'none';
         }
       });
     }
 
-    // Start animation when stats are visible
-    const observerOptions = {
-      threshold: 0.5,
-      rootMargin: '0px'
-    };
+    /* --- ANIMATE SKILL BARS --- */
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const skillBars = entry.target.querySelectorAll('.skill-bar-fill');
+          skillBars.forEach(bar => {
+            const width = bar.getAttribute('data-width');
+            bar.style.width = width + '%';
+          });
+        }
+      });
+    }, { threshold: 0.5 });
 
+    document.querySelectorAll('.skills-category').forEach(category => {
+      skillObserver.observe(category);
+    });
+
+    /* --- STATS COUNTER --- */
     const statsObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const stats = entry.target.querySelectorAll('.stat-number');
-          stats.forEach(stat => {
-            stat.innerText = '0'; // Reset
-          });
           
-          const interval = setInterval(() => {
-            let allDone = true;
-            stats.forEach(stat => {
-              const target = parseInt(stat.getAttribute('data-target'));
-              const current = parseInt(stat.innerText);
-              if (current < target) {
-                allDone = false;
-                const increment = Math.ceil(target / 50);
-                const newValue = Math.min(current + increment, target);
-                stat.innerText = newValue;
+          stats.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target'));
+            let current = 0;
+            const increment = target / 50; // Smooth animation
+            
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                stat.innerText = target;
+                clearInterval(timer);
+              } else {
+                stat.innerText = Math.floor(current);
               }
-            });
-            if (allDone) clearInterval(interval);
-          }, 30);
+            }, 30);
+          });
           
           statsObserver.unobserve(entry.target);
         }
       });
-    }, observerOptions);
+    }, { threshold: 0.5 });
 
     const statsSection = document.querySelector('.stats-container');
     if (statsSection) {
       statsObserver.observe(statsSection);
     }
 
-    // 3. Animate skill bars when visible
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const skillBars = entry.target.querySelectorAll('.skill-progress');
-          skillBars.forEach(bar => {
-            const width = bar.getAttribute('data-width');
-            bar.style.width = width + '%';
-          });
-          skillObserver.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    const skillsSection = document.querySelector('.skills-container');
-    if (skillsSection) {
-      skillObserver.observe(skillsSection);
-    }
-
-    // 4. Smooth scroll for anchor links
+    /* --- SMOOTH SCROLL FOR ANCHOR LINKS --- */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1006,47 +1508,6 @@
         }
       });
     });
-
-    // 5. Lazy loading for images (already added loading="lazy" in HTML)
-
-    // 6. Add active class to current nav link based on scroll
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('.page-section');
-      const navLinks = document.querySelectorAll('nav a');
-      
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active-link');
-        if (link.getAttribute('onclick')?.includes(current)) {
-          link.classList.add('active-link');
-        }
-      });
-    });
-
-    // 7. Form validation enhancement
-    const contactForm = document.querySelector('form[action*="formspree"]');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        const email = document.getElementById('email');
-        const message = document.getElementById('message');
-        
-        if (!email.value || !message.value) {
-          e.preventDefault();
-          alert('Please fill in all fields');
-        } else if (!email.value.includes('@')) {
-          e.preventDefault();
-          alert('Please enter a valid email address');
-        }
-      });
-    }
   </script>
 </body>
 </html>
