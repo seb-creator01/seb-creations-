@@ -17,9 +17,11 @@
   <meta name="twitter:description" content="Professional editing and design services by Precious Sebastian." />
   <meta name="twitter:image" content="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" />
   
+  <link rel="icon" href="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/IMG_20250720_214611_200.jpg" />
+
   <style>
-     /* --- CORE SETTINGS --- */
-     :root {
+    /* --- CORE SETTINGS --- */
+    :root {
       --primary-glow: #00d2ff;
       --secondary-glow: #3a7bd5;
       --dark-bg: #0b0f1a;
@@ -31,7 +33,6 @@
       scroll-behavior: smooth;
     }
 
-    /* --- NEW GLOWING BACKGROUND LOGIC --- */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--dark-bg);
@@ -42,7 +43,6 @@
       overflow-x: hidden;
     }
 
-    /* Animated background glow aura */
     body::before {
       content: "";
       position: fixed;
@@ -60,14 +60,13 @@
 
     /* --- SPA PAGE LOGIC STYLES --- */
     .page-section {
-      display: none; /* Hide all sections by default */
+      display: none; 
       animation: fadeInPage 0.6s ease-out forwards;
     }
     .page-section.active {
-      display: block; /* Show active section */
+      display: block; 
     }
 
-    /* --- NAVIGATION GLOW --- */
     nav {
       background: rgba(11, 21, 35, 0.9);
       backdrop-filter: blur(15px);
@@ -107,7 +106,6 @@
       background: transparent;
     }
 
-    /* --- UPDATED HEADER GLOW --- */
     h1.animated-heading {
       font-size: 3rem;
       background: linear-gradient(to right, #fff, var(--primary-glow));
@@ -134,7 +132,6 @@
       transform: translateY(-2px);
     }
 
-    /* --- GLASSMORPHISM MAIN CONTAINER --- */
     main {
       max-width: 850px;
       margin: 2em auto;
@@ -169,10 +166,10 @@
       border-radius: 12px;
       text-align: center;
       border: 1px solid rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
     }
     .service-item:hover {
-      transform: translateY(-8px);
+      transform: translateY(-8px) scale(1.02);
       background: rgba(255,255,255,0.06);
       border-color: var(--primary-glow);
       box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
@@ -184,7 +181,6 @@
       filter: drop-shadow(0 0 8px var(--primary-glow));
     }
 
-    /* --- PROCESS TIMELINE STYLES --- */
     .process-container {
       display: flex;
       flex-direction: column;
@@ -207,7 +203,6 @@
       min-width: 40px;
     }
 
-    /* --- TOOLS BADGES --- */
     .tools-container {
       display: flex;
       flex-wrap: wrap;
@@ -261,8 +256,10 @@
       display: none;
       z-index: 1000;
       box-shadow: 0 0 15px var(--primary-glow);
+      transition: all 0.3s ease;
     }
-    
+    .back-to-top:hover { transform: scale(1.1); box-shadow: 0 0 25px var(--primary-glow); }
+
     .pricing { margin-top: 2em; text-align: center; }
     .pricing-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 1em; margin-top: 1em; }
     .pricing-card { 
@@ -272,14 +269,18 @@
       width: 250px; 
       border: 1px solid rgba(255,255,255,0.05);
       transition: 0.3s;
+      cursor: pointer;
     }
-    .pricing-card:hover { border-color: var(--primary-glow); box-shadow: 0 0 15px rgba(0, 210, 255, 0.15); }
+    .pricing-card:hover { 
+      border-color: var(--primary-glow); 
+      box-shadow: 0 0 25px rgba(0, 210, 255, 0.2); 
+      transform: translateY(-5px) scale(1.03);
+    }
     .pricing-card h4 { margin-top: 0; color: var(--primary-glow); }
     .pricing-card .price { font-size: 1.5em; margin: 0.5em 0; font-weight: bold; }
 
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    
-    /* --- PORTFOLIO GALLERY GLOW --- */
+
     .portfolio-gallery { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
     .portfolio-gallery img { 
       width: 200px; 
@@ -289,6 +290,7 @@
       object-fit: cover; 
       transition: all 0.4s ease;
       border: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer;
     }
     .portfolio-gallery img:hover { 
       transform: scale(1.08); 
@@ -296,14 +298,23 @@
       box-shadow: 0 0 25px rgba(0, 210, 255, 0.4); 
     }
 
-    .testimonials { text-align: center; padding: 2em; background: rgba(0, 210, 255, 0.03); border-radius: 15px; margin-top: 1.5em; }
-    .testimonial { display: none; padding: 1em; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); }
+    /* Lightbox overlay */
+    .lightbox {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center; align-items: center;
+      z-index: 2000;
+    }
+    .lightbox img { max-width: 90%; max-height: 80%; border-radius: 10px; box-shadow: 0 0 30px var(--primary-glow); }
+
+    .testimonial { display: none; padding: 1em; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.5s ease; }
     .testimonial.active { display: block; }
-    
-    .faq-item h4 { color: var(--primary-glow); }
-    .faq-item p { color: #cbd5e1; }
-    
-    /* --- CTA GLOW --- */
+
+    .faq-item h4 { color: var(--primary-glow); cursor: pointer; margin: 0; }
+    .faq-item p { color: #cbd5e1; display: none; margin: 0.5em 0 0 0; }
+
     .cta { 
       background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(0, 210, 255, 0.2)); 
       color: white; 
@@ -313,6 +324,7 @@
       margin-top: 3em; 
       border: 1px solid var(--primary-glow);
       box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
+      transition: all 0.3s ease;
     }
     .cta-button { 
       display: inline-block; 
@@ -326,11 +338,10 @@
       transition: 0.3s;
     }
     .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 20px white; }
-    
+
     .footer-nav a { color: #94a3b8; }
     .footer-nav a:hover { color: var(--primary-glow); }
 
-    /* Inputs Glowing */
     input, textarea {
       background: rgba(255,255,255,0.05) !important;
       border: 1px solid rgba(255,255,255,0.1) !important;
@@ -347,7 +358,7 @@
     }
 
     @media (max-width: 1024px) { main { max-width: 90%; } .pricing-card { width: 45%; } }
-    @media (max-width: 768px) { .pricing-card { width: 100%; } }
+    @media (max-width: 768px) { .pricing-card { width: 100%; } nav { display: flex; flex-direction: column; } }
   </style>
 </head>
 <body id="top">
@@ -381,7 +392,7 @@
             <p>"I love the voice notes and background edits. Highly recommended!"</p>
             <span>- Daniel, Abuja</span>
           </div>
-          <div class="testimonial">
+        <div class="testimonial">
             <p>"Very professional and easy to work with. Will definitely hire again."</p>
             <span>- Sophia, Port Harcourt</span>
           </div>
@@ -553,8 +564,13 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX FOR PORTFOLIO IMAGES -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Enlarged portfolio image" />
+  </div>
+
   <script>
-    /* --- SPA NAVIGATION SCRIPT --- */
+    /* SPA NAVIGATION */
     function navigateTo(sectionId) {
       const sections = document.querySelectorAll('.page-section');
       sections.forEach(sec => sec.classList.remove('active'));
@@ -563,19 +579,15 @@
       navLinks.forEach(link => link.classList.remove('active-link'));
 
       const targetSection = document.getElementById(sectionId);
-      if (targetSection) {
-        targetSection.classList.add('active');
-      }
+      if (targetSection) targetSection.classList.add('active');
 
       const targetLink = document.getElementById('link-' + sectionId);
-      if (targetLink) {
-        targetLink.classList.add('active-link');
-      }
+      if (targetLink) targetLink.classList.add('active-link');
 
       window.scrollTo(0, 0);
     }
 
-    /* --- TESTIMONIAL CAROUSEL --- */
+    /* TESTIMONIAL CAROUSEL */
     let current = 0;
     const testimonials = document.querySelectorAll(".testimonial");
     function showNextTestimonial() {
@@ -587,7 +599,7 @@
     }
     setInterval(showNextTestimonial, 4000);
 
-    /* --- BACK TO TOP SCRIPT --- */
+    /* BACK TO TOP */
     const backToTop = document.querySelector('.back-to-top');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
@@ -595,6 +607,36 @@
       } else {
         backToTop.style.display = 'none';
       }
+    });
+
+    /* PORTFOLIO LIGHTBOX */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.portfolio-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.style.display = 'none');
+
+    /* FAQ TOGGLE */
+    document.querySelectorAll('.faq-item h4').forEach(header => {
+      header.addEventListener('click', () => {
+        const p = header.nextElementSibling;
+        p.style.display = (p.style.display === 'block') ? 'none' : 'block';
+      });
+    });
+
+    /* SCROLL SPY NAVIGATION HIGHLIGHT */
+    const sections = document.querySelectorAll('.page-section');
+    window.addEventListener('scroll', () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        const link = document.getElementById('link-' + sec.id);
+        if(rect.top <= 100 && rect.bottom >= 100) link.classList.add('active-link');
+        else link.classList.remove('active-link');
+      });
     });
   </script>
 </body>
