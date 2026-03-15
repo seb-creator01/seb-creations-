@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
   <style>
-     /* --- YOUR EXISTING CORE SETTINGS (COMPLETELY PRESERVED) --- */
+     /* --- YOUR EXISTING CORE SETTINGS --- */
      :root {
       --primary-glow: #00d2ff;
       --secondary-glow: #3a7bd5;
@@ -36,7 +36,7 @@
       scroll-behavior: smooth;
     }
 
-    /* --- YOUR EXISTING GLOWING BACKGROUND --- */
+    /* --- YOUR GLOWING BACKGROUND --- */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--dark-bg);
@@ -45,6 +45,40 @@
       margin: 0; padding: 0;
       color: var(--text-main);
       overflow-x: hidden;
+    }
+
+    /* Particle background */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: var(--primary-glow);
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: floatParticle 15s linear infinite;
+    }
+
+    @keyframes floatParticle {
+      0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.5; }
+      90% { opacity: 0.5; }
+      100% {
+        transform: translateY(-100vh) translateX(100px) rotate(360deg);
+        opacity: 0;
+      }
     }
 
     body::before {
@@ -60,6 +94,19 @@
     @keyframes rotateGlow {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
+    }
+
+    /* Time greeting */
+    .time-greeting {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      background: linear-gradient(135deg, rgba(0,210,255,0.1), rgba(58,123,213,0.1));
+      border-radius: 50px;
+      display: inline-block;
+      padding: 0.5rem 2rem;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     /* --- YOUR SPA PAGE LOGIC STYLES --- */
@@ -106,7 +153,7 @@
     }
 
     header {
-      padding: 2em 0;
+      padding: 2em 0 1em;
       text-align: center;
       background: transparent;
     }
@@ -118,6 +165,7 @@
       -webkit-text-fill-color: transparent;
       filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.4));
       animation: fadeIn 1s ease-out forwards;
+      margin-bottom: 0.5rem;
     }
 
     h1.animated-heading span {
@@ -127,6 +175,30 @@
       -webkit-text-fill-color: var(--primary-glow);
       color: var(--primary-glow);
       margin-top: 0.5rem;
+    }
+
+    /* Typing animation */
+    .typing-container {
+      text-align: center;
+      margin: 1rem 0 2rem;
+      font-size: 1.5rem;
+    }
+    
+    .typing-text {
+      display: inline-block;
+      color: #94a3b8;
+    }
+    
+    #typed-text {
+      color: var(--primary-glow);
+      font-weight: bold;
+      border-right: 3px solid var(--primary-glow);
+      padding-right: 5px;
+      animation: blink 0.7s infinite;
+    }
+    
+    @keyframes blink {
+      50% { border-color: transparent; }
     }
 
     form button {
@@ -222,7 +294,130 @@
       margin-top: 0.5rem;
     }
 
-    /* --- ENHANCED SKILLS SECTION FOR FULL-STACK --- */
+    /* Client love hearts */
+    .client-love {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.02);
+      border-radius: 15px;
+    }
+    
+    .hearts-container {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    
+    .heart {
+      color: #ff4d4d;
+      font-size: 1.5rem;
+      animation: heartbeat 1.5s ease infinite;
+    }
+    
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    /* Fun fact section */
+    .fun-fact {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .fact-card {
+      background: linear-gradient(135deg, rgba(0,210,255,0.1), rgba(58,123,213,0.1));
+      padding: 1.5rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .fact-button {
+      background: transparent;
+      border: 1px solid var(--primary-glow);
+      color: var(--primary-glow);
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .fact-button:hover {
+      background: var(--primary-glow);
+      color: var(--dark-bg);
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    /* Personal quote */
+    .personal-quote {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.02);
+      border-radius: 10px;
+      font-style: italic;
+    }
+    
+    .personal-quote i {
+      font-size: 2rem;
+      color: var(--primary-glow);
+      margin-right: 0.5rem;
+    }
+
+    /* Coffee chat button */
+    .coffee-chat {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #6f4e37;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 1rem 0;
+    }
+    
+    .coffee-chat:hover {
+      background: #8b5e3c;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(111, 78, 55, 0.4);
+    }
+
+    /* Tech cloud */
+    .tech-cloud {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .cloud-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem 1.5rem;
+      margin-top: 1rem;
+    }
+    
+    .cloud-tag {
+      color: var(--primary-glow);
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      background: rgba(0,210,255,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .cloud-tag:hover {
+      transform: scale(1.1);
+      background: var(--primary-glow);
+      color: var(--dark-bg);
+      cursor: default;
+    }
+
+    /* --- SKILLS SECTION --- */
     .skills-category {
       margin: 2rem 0;
     }
@@ -265,12 +460,6 @@
       margin-bottom: 0.3rem;
     }
     
-    .skill-level {
-      font-size: 0.8rem;
-      color: #94a3b8;
-    }
-    
-    /* Skill bars */
     .skill-bar-container {
       margin-top: 0.5rem;
       width: 100%;
@@ -312,7 +501,7 @@
       box-shadow: 0 0 15px var(--primary-glow);
     }
     
-    /* --- SERVICES GRID --- */
+    /* --- SERVICES GRID with floating emojis --- */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -327,6 +516,26 @@
       text-align: center;
       border: 1px solid rgba(255,255,255,0.05);
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-item::before {
+      content: "✨";
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      font-size: 3rem;
+      opacity: 0;
+      transform: rotate(15deg);
+      transition: all 0.5s ease;
+    }
+    
+    .service-item:hover::before {
+      opacity: 0.3;
+      top: 5px;
+      right: 5px;
+      transform: rotate(0deg);
     }
     
     .service-item:hover {
@@ -341,6 +550,23 @@
       margin-bottom: 10px; 
       display: block; 
       filter: drop-shadow(0 0 8px var(--primary-glow));
+    }
+    
+    .mood-indicator {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      font-size: 1.2rem;
+    }
+    
+    .mood-indicator span {
+      cursor: help;
+      transition: all 0.3s ease;
+    }
+    
+    .mood-indicator span:hover {
+      transform: scale(1.2);
     }
     
     .project-tags {
@@ -418,7 +644,33 @@
       color: #94a3b8;
     }
 
-    /* --- YOUR PROCESS TIMELINE --- */
+    /* Success story */
+    .success-story {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(255,165,0,0.05));
+      border-radius: 15px;
+      border: 1px solid rgba(255,215,0,0.2);
+    }
+    
+    .story-card {
+      text-align: center;
+    }
+    
+    .story-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      color: #94a3b8;
+    }
+    
+    .story-stats i {
+      color: gold;
+      margin-right: 0.3rem;
+    }
+
+    /* --- PROCESS TIMELINE --- */
     .process-container {
       display: flex;
       flex-direction: column;
@@ -441,7 +693,77 @@
       min-width: 40px;
     }
 
-    /* --- YOUR CONTACT BUTTONS --- */
+    /* --- TESTIMONIALS SECTION (ENHANCED) --- */
+    .testimonials-section {
+      margin: 3rem 0;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .testimonial-card {
+      background: rgba(255,255,255,0.02);
+      padding: 1.5rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      border-color: var(--primary-glow);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,210,255,0.1);
+    }
+    
+    .testimonial-card i {
+      color: var(--primary-glow);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .testimonial-card p {
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+    
+    .testimonial-author {
+      color: var(--primary-glow);
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    
+    .testimonial-service {
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    /* Carousel for featured testimonials */
+    .testimonial-carousel {
+      text-align: center;
+      padding: 2em;
+      background: rgba(0, 210, 255, 0.03);
+      border-radius: 15px;
+      margin-top: 2em;
+    }
+    
+    .carousel-item { 
+      display: none; 
+      padding: 1.5em; 
+      background: rgba(255,255,255,0.02); 
+      border-radius: 10px; 
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .carousel-item.active { display: block; }
+    
+    .carousel-item p {
+      font-size: 1.1rem;
+    }
+
+    /* --- CONTACT BUTTONS --- */
     .contact-links {
       display: flex;
       flex-wrap: wrap;
@@ -469,7 +791,7 @@
     .contact-links a.linkedin { background-color: #0077b5; box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3); }
     .contact-links a.contact-btn:hover { opacity: 0.85; transform: scale(1.05); box-shadow: 0 0 15px rgba(255,255,255,0.2); }
 
-    /* --- PRICING SECTION (UPDATED - YOUR ORIGINAL STYLE) --- */
+    /* --- PRICING SECTION --- */
     .pricing { 
       margin-top: 2em; 
       text-align: center; 
@@ -546,7 +868,7 @@
       line-height: 1.5;
     }
 
-    /* Custom Quote Section */
+    /* Quote section */
     .quote-section {
       padding: 2.5rem 2rem;
       background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(58,123,213,0.05));
@@ -559,12 +881,6 @@
     .quote-section h2 {
       color: var(--primary-glow);
       margin-bottom: 1rem;
-    }
-    
-    .quote-section p {
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-      color: #cbd5e1;
     }
     
     .quote-buttons {
@@ -601,52 +917,12 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
     
-    .quote-btn.whatsapp:hover {
-      box-shadow: 0 0 20px #25D366;
-    }
-    
-    .quote-btn.email:hover {
-      border-color: var(--primary-glow);
-      box-shadow: 0 0 20px var(--primary-glow);
-    }
-    
     .quote-footer {
       margin-top: 1.5rem;
       color: var(--primary-glow);
       font-style: italic;
     }
 
-    /* --- YOUR FOOTER --- */
-    footer {
-      background: #05080f;
-      color: #94a3b8;
-      padding: 2em 0;
-      text-align: center;
-      margin-top: 3em;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    
-    /* --- YOUR BACK TO TOP BUTTON --- */
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 20px;
-      background: var(--primary-glow);
-      color: white;
-      padding: 10px 15px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 20px;
-      display: none;
-      z-index: 1000;
-      box-shadow: 0 0 15px var(--primary-glow);
-      transition: all 0.3s ease;
-    }
-    .back-to-top:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 25px var(--primary-glow);
-    }
-    
     /* --- PORTFOLIO GALLERY --- */
     .portfolio-gallery { 
       display: grid;
@@ -670,34 +946,6 @@
       box-shadow: 0 0 25px rgba(0, 210, 255, 0.4); 
     }
 
-    /* --- TESTIMONIALS --- */
-    .testimonials { 
-      text-align: center; 
-      padding: 2em; 
-      background: rgba(0, 210, 255, 0.03); 
-      border-radius: 15px; 
-      margin-top: 2em; 
-    }
-    
-    .testimonial { 
-      display: none; 
-      padding: 1.5em; 
-      background: rgba(255,255,255,0.02); 
-      border-radius: 10px; 
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    .testimonial.active { display: block; }
-    
-    .testimonial p {
-      font-size: 1.1rem;
-      font-style: italic;
-    }
-    
-    .testimonial span {
-      color: var(--primary-glow);
-      font-weight: bold;
-    }
-    
     /* --- FAQ --- */
     .faq-item { 
       margin-bottom: 1.5rem;
@@ -743,12 +991,43 @@
     }
     .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 20px white; }
     
+    /* --- FOOTER --- */
+    footer {
+      background: #05080f;
+      color: #94a3b8;
+      padding: 2em 0;
+      text-align: center;
+      margin-top: 3em;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    
     .footer-nav a { 
       color: #94a3b8;
       margin: 0 0.5rem;
       cursor: pointer;
     }
     .footer-nav a:hover { color: var(--primary-glow); }
+    
+    /* --- BACK TO TOP --- */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background: var(--primary-glow);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 0 15px var(--primary-glow);
+      transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px var(--primary-glow);
+    }
 
     /* --- INPUT STYLES --- */
     input, textarea, select {
@@ -797,17 +1076,20 @@
       h1.animated-heading span { font-size: 0.9rem; }
       .services-tabs { justify-content: center; }
       .pricing-card { width: 100%; max-width: 350px; }
+      .story-stats { flex-direction: column; gap: 0.5rem; }
     }
     
     @media (max-width: 480px) {
       nav a { margin: 0 5px; font-size: 0.8rem; }
       .contact-links a.contact-btn { width: 100%; justify-content: center; }
       .quote-buttons { flex-direction: column; }
-      .quote-btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
 <body id="top">
+  <!-- Particle background -->
+  <div class="particles" id="particles"></div>
+  
   <!-- Scroll progress indicator -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -816,6 +1098,15 @@
       seb Creation
       <span>Full-Stack Developer & Designer</span>
     </h1>
+    
+    <!-- Time greeting -->
+    <div class="time-greeting" id="greeting"></div>
+    
+    <!-- Typing animation -->
+    <div class="typing-container">
+      <span class="typing-text">I build </span>
+      <span id="typed-text"></span>
+    </div>
   </header>
 
   <nav id="main-nav">
@@ -834,14 +1125,20 @@
       <h2>About Me</h2>
       <p>Hello! I'm <strong>Precious Sebastian</strong> – a passionate <strong>Full-Stack Developer</strong> and <strong>Creative Designer</strong>. I build complete digital solutions from frontend to backend, and bring ideas to life with stunning visuals.</p>
       
+      <!-- Client love hearts -->
+      <div class="client-love">
+        <div class="hearts-container" id="heartsContainer"></div>
+        <p><span id="happyClients">28</span> happy clients <i class="fas fa-heart" style="color: #ff4d4d;"></i> and counting!</p>
+      </div>
+      
       <!-- Stats section -->
       <div class="stats-container">
         <div class="stat-item">
-          <div class="stat-number" data-target="25">0</div>
+          <div class="stat-number" data-target="45">0</div>
           <div class="stat-label">Projects Completed</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-number" data-target="28">0</div>
           <div class="stat-label">Happy Clients</div>
         </div>
         <div class="stat-item">
@@ -849,8 +1146,24 @@
           <div class="stat-label">Years Experience</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-number" data-target="15">0</div>
           <div class="stat-label">Technologies</div>
+        </div>
+      </div>
+
+      <!-- Personal quote -->
+      <div class="personal-quote">
+        <i class="fas fa-quote-left"></i>
+        <p id="dailyQuote"></p>
+        <small>- Precious Sebastian</small>
+      </div>
+
+      <!-- Fun fact corner -->
+      <div class="fun-fact">
+        <h3><i class="fas fa-smile"></i> Fun Fact</h3>
+        <div class="fact-card">
+          <p id="funFact"></p>
+          <button onclick="newFact()" class="fact-button">Tell me another! 🎲</button>
         </div>
       </div>
 
@@ -917,30 +1230,145 @@
           </div>
         </div>
       </div>
+
+      <!-- Tech cloud -->
+      <div class="tech-cloud">
+        <h3>Technologies I <i class="fas fa-heart" style="color: #ff4d4d;"></i></h3>
+        <div class="cloud-tags">
+          <span class="cloud-tag" style="font-size: 2rem;">Python</span>
+          <span class="cloud-tag" style="font-size: 1.8rem;">JavaScript</span>
+          <span class="cloud-tag" style="font-size: 1.5rem;">React</span>
+          <span class="cloud-tag" style="font-size: 1.2rem;">PHP</span>
+          <span class="cloud-tag" style="font-size: 2.2rem;">HTML5</span>
+          <span class="cloud-tag" style="font-size: 1.9rem;">CSS3</span>
+          <span class="cloud-tag" style="font-size: 1.6rem;">Node.js</span>
+          <span class="cloud-tag" style="font-size: 1.4rem;">MySQL</span>
+          <span class="cloud-tag" style="font-size: 1.7rem;">MongoDB</span>
+          <span class="cloud-tag" style="font-size: 1.3rem;">Flutter</span>
+        </div>
+      </div>
       
-      <!-- Testimonials -->
-      <section class="testimonials">
+      <!-- Testimonials Section (Enhanced with more) -->
+      <div class="testimonials-section">
         <h3>What Clients Say</h3>
-        <div class="carousel">
-          <div class="testimonial active">
+        
+        <!-- Testimonials Grid -->
+        <div class="testimonials-grid">
+          <!-- Development Testimonials -->
+          <div class="testimonial-card">
+            <i class="fas fa-code"></i>
             <p>"Seb built a complete mobile app with backend for my business. Amazing work!"</p>
-            <span>- Michael, Lagos</span>
+            <div class="testimonial-author">- Michael, Lagos</div>
+            <div class="testimonial-service">Mobile App Development</div>
           </div>
-          <div class="testimonial">
-            <p>"Full-stack development AND design? Sebastian is a rare talent. Highly recommended!"</p>
-            <span>- Chioma, Abuja</span>
-          </div>
-          <div class="testimonial">
+          
+          <div class="testimonial-card">
+            <i class="fas fa-database"></i>
             <p>"The API integration was flawless. Very professional and timely delivery."</p>
-            <span>- Tunde, Port Harcourt</span>
+            <div class="testimonial-author">- Tunde, Port Harcourt</div>
+            <div class="testimonial-service">Backend Development</div>
+          </div>
+          
+          <div class="testimonial-card">
+            <i class="fas fa-laptop-code"></i>
+            <p>"Full-stack development AND design? Sebastian is a rare talent. Highly recommended!"</p>
+            <div class="testimonial-author">- Chioma, Abuja</div>
+            <div class="testimonial-service">Full-Stack Web App</div>
+          </div>
+          
+          <!-- Design & Editing Testimonials (New) -->
+          <div class="testimonial-card">
+            <i class="fas fa-paint-brush"></i>
+            <p>"The flyer designs are absolutely stunning! Captured my brand perfectly."</p>
+            <div class="testimonial-author">- Blessing, Uyo</div>
+            <div class="testimonial-service">Graphic Design</div>
+          </div>
+          
+          <div class="testimonial-card">
+            <i class="fas fa-image"></i>
+            <p>"Background removal was so clean, you can't even tell it was edited. Super fast too!"</p>
+            <div class="testimonial-author">- Emeka, Onitsha</div>
+            <div class="testimonial-service">Photo Editing</div>
+          </div>
+          
+          <div class="testimonial-card">
+            <i class="fas fa-crop-alt"></i>
+            <p>"My product photos look professional now. Sales increased because of better images!"</p>
+            <div class="testimonial-author">- Fatima, Kano</div>
+            <div class="testimonial-service">Product Photo Retouching</div>
+          </div>
+          
+          <div class="testimonial-card">
+            <i class="fas fa-microphone-alt"></i>
+            <p>"The voice note for my commercial was perfect - clear, professional voice."</p>
+            <div class="testimonial-author">- Ahmed, Ibadan</div>
+            <div class="testimonial-service">Voice Over</div>
+          </div>
+          
+          <div class="testimonial-card">
+            <i class="fas fa-pen-fancy"></i>
+            <p>"Logo design exceeded my expectations. Everyone compliments my brand now!"</p>
+            <div class="testimonial-author">- Grace, Enugu</div>
+            <div class="testimonial-service">Logo Design</div>
+          </div>
+          
+          <div class="testimonial-card">
+            <i class="fas fa-magic"></i>
+            <p>"Object removal from my family photo looked like magic! Preserved the quality perfectly."</p>
+            <div class="testimonial-author">- Mr. Adebayo, Ilorin</div>
+            <div class="testimonial-service">Photo Retouching</div>
+          </div>
+          
+          <div class="testimonial-card">
+            <i class="fas fa-scroll"></i>
+            <p>"Converted my documents to PDF professionally. Great attention to detail."</p>
+            <div class="testimonial-author">- Dr. Nnamdi, Awka</div>
+            <div class="testimonial-service">PDF Creation</div>
           </div>
         </div>
-      </section>
+        
+        <!-- Featured Testimonials Carousel -->
+        <div class="testimonial-carousel">
+          <h4>Featured Reviews</h4>
+          <div class="carousel-container">
+            <div class="carousel-item active">
+              <p>"Best designer I've worked with in Nigeria. Understood my vision immediately!"</p>
+              <span>- Esther, Lagos (Graphic Design)</span>
+            </div>
+            <div class="carousel-item">
+              <p>"The website Sebastian built for my hotel booking system is fantastic. No issues at all!"</p>
+              <span>- Chief Okonkwo, Asaba (Web Development)</span>
+            </div>
+            <div class="carousel-item">
+              <p>"Quick turnaround on photo edits. My Instagram page looks so much better now."</p>
+              <span>- Temi, Abuja (Photo Editing)</span>
+            </div>
+            <div class="carousel-item">
+              <p>"Patient, professional, and talented. Will definitely hire again for more projects."</p>
+              <span>- Pastor James, Calabar (Logo Design)</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- SERVICES SECTION -->
     <section id="services" class="page-section">
       <h2>What I Can Do For You</h2>
+      
+      <!-- Success story highlight -->
+      <div class="success-story">
+        <h3><i class="fas fa-star" style="color: gold;"></i> Recent Win</h3>
+        <div class="story-card">
+          <p>"Built a complete e-commerce app for a local business. Their sales increased by 200% in just 2 months!"</p>
+          <span>- Happy Client</span>
+          <div class="story-stats">
+            <span><i class="fas fa-rocket"></i> 2 weeks delivery</span>
+            <span><i class="fas fa-users"></i> 500+ users</span>
+            <span><i class="fas fa-chart-line"></i> 200% growth</span>
+          </div>
+        </div>
+      </div>
       
       <!-- Service tabs -->
       <div class="services-tabs">
@@ -1008,6 +1436,11 @@
             <span class="project-tag">React Native</span>
             <span class="project-tag">Flutter</span>
           </div>
+          <div class="mood-indicator">
+            <span title="Innovative">💡</span>
+            <span title="Fast">⚡</span>
+            <span title="Scalable">📈</span>
+          </div>
         </div>
         <div class="service-item" data-category="dev">
           <span class="service-icon"><i class="fab fa-python"></i></span>
@@ -1016,6 +1449,10 @@
           <div class="project-tags">
             <span class="project-tag">Django</span>
             <span class="project-tag">Flask</span>
+          </div>
+          <div class="mood-indicator">
+            <span title="Powerful">⚡</span>
+            <span title="Clean">🧹</span>
           </div>
         </div>
         <div class="service-item" data-category="dev">
@@ -1026,6 +1463,9 @@
             <span class="project-tag">Laravel</span>
             <span class="project-tag">WordPress</span>
           </div>
+          <div class="mood-indicator">
+            <span title="Reliable">🔒</span>
+          </div>
         </div>
         <div class="service-item" data-category="dev">
           <span class="service-icon"><i class="fas fa-database"></i></span>
@@ -1034,6 +1474,9 @@
           <div class="project-tags">
             <span class="project-tag">SQL</span>
             <span class="project-tag">NoSQL</span>
+          </div>
+          <div class="mood-indicator">
+            <span title="Organized">📊</span>
           </div>
         </div>
         <div class="service-item" data-category="dev">
@@ -1044,6 +1487,9 @@
             <span class="project-tag">AWS</span>
             <span class="project-tag">cPanel</span>
           </div>
+          <div class="mood-indicator">
+            <span title="Secure">🛡️</span>
+          </div>
         </div>
         <div class="service-item" data-category="dev">
           <span class="service-icon"><i class="fas fa-plug"></i></span>
@@ -1052,6 +1498,9 @@
           <div class="project-tags">
             <span class="project-tag">Payment</span>
             <span class="project-tag">Maps</span>
+          </div>
+          <div class="mood-indicator">
+            <span title="Connected">🔌</span>
           </div>
         </div>
         <div class="service-item" data-category="dev">
@@ -1062,9 +1511,12 @@
             <span class="project-tag">React</span>
             <span class="project-tag">Node.js</span>
           </div>
+          <div class="mood-indicator">
+            <span title="Dynamic">⚡</span>
+          </div>
         </div>
 
-        <!-- Design Services (Your Original) -->
+        <!-- Design Services -->
         <div class="service-item" data-category="design">
           <span class="service-icon">🌐</span>
           <h4>Website Design</h4>
@@ -1072,6 +1524,10 @@
           <div class="project-tags">
             <span class="project-tag">HTML/CSS</span>
             <span class="project-tag">Responsive</span>
+          </div>
+          <div class="mood-indicator">
+            <span title="Modern">✨</span>
+            <span title="Clean">🧼</span>
           </div>
         </div>
         <div class="service-item" data-category="design">
@@ -1082,6 +1538,10 @@
             <span class="project-tag">Photoshop</span>
             <span class="project-tag">Illustrator</span>
           </div>
+          <div class="mood-indicator">
+            <span title="Creative">🎨</span>
+            <span title="Colorful">🌈</span>
+          </div>
         </div>
         <div class="service-item" data-category="design">
           <span class="service-icon">🖼️</span>
@@ -1089,6 +1549,9 @@
           <p>Product photo isolation</p>
           <div class="project-tags">
             <span class="project-tag">Precision</span>
+          </div>
+          <div class="mood-indicator">
+            <span title="Clean">✨</span>
           </div>
         </div>
         <div class="service-item" data-category="design">
@@ -1098,6 +1561,9 @@
           <div class="project-tags">
             <span class="project-tag">Retouch</span>
           </div>
+          <div class="mood-indicator">
+            <span title="Beautiful">💫</span>
+          </div>
         </div>
         <div class="service-item" data-category="design">
           <span class="service-icon">💎</span>
@@ -1105,6 +1571,9 @@
           <p>Unique brand identities</p>
           <div class="project-tags">
             <span class="project-tag">Branding</span>
+          </div>
+          <div class="mood-indicator">
+            <span title="Elegant">💎</span>
           </div>
         </div>
         <div class="service-item" data-category="design">
@@ -1114,6 +1583,9 @@
           <div class="project-tags">
             <span class="project-tag">Male/Female</span>
           </div>
+          <div class="mood-indicator">
+            <span title="Clear">🎤</span>
+          </div>
         </div>
         <div class="service-item" data-category="design">
           <span class="service-icon">🪄</span>
@@ -1122,6 +1594,9 @@
           <div class="project-tags">
             <span class="project-tag">Clone Tool</span>
           </div>
+          <div class="mood-indicator">
+            <span title="Magic">✨</span>
+          </div>
         </div>
         <div class="service-item" data-category="design">
           <span class="service-icon">📄</span>
@@ -1129,6 +1604,9 @@
           <p>Professional documents</p>
           <div class="project-tags">
             <span class="project-tag">Layout</span>
+          </div>
+          <div class="mood-indicator">
+            <span title="Professional">📋</span>
           </div>
         </div>
       </div>
@@ -1167,12 +1645,12 @@
           <p>Yes! I'm a full-stack developer - I handle everything from database design to user interface.</p>
         </div>
         <div class="faq-item">
-          <h4>Do you offer maintenance after delivery?</h4>
-          <p>Absolutely. I provide support and maintenance packages for all projects.</p>
+          <h4>Do you offer both design and development?</h4>
+          <p>Absolutely! From graphic design to mobile apps - I provide complete solutions.</p>
         </div>
         <div class="faq-item">
-          <h4>What technologies do you specialize in?</h4>
-          <p>JavaScript, Python, PHP, mobile development, databases, and modern frameworks.</p>
+          <h4>How fast can you deliver design work?</h4>
+          <p>Simple designs like flyers within 24 hours, complex projects as agreed.</p>
         </div>
       </div>
     </section>
@@ -1241,7 +1719,7 @@
       </div>
     </section>
 
-    <!-- PRICING SECTION (UPDATED - Your original style) -->
+    <!-- PRICING SECTION -->
     <section id="pricing" class="page-section">
       <div class="pricing">
         <h2>Pricing</h2>
@@ -1287,7 +1765,14 @@
         </div>
       </div>
 
-      <!-- Custom Quote Section (Enhanced version of your original payment-info) -->
+      <!-- Coffee Chat Button -->
+      <div style="text-align: center;">
+        <a href="https://wa.me/2348053103234" class="coffee-chat" target="_blank">
+          <i class="fas fa-coffee"></i> Let's chat over coffee (virtually!)
+        </a>
+      </div>
+
+      <!-- Custom Quote Section -->
       <div class="quote-section">
         <h2><i class="fas fa-comment-dollar"></i> Get a Custom Quote</h2>
         <p>
@@ -1339,7 +1824,7 @@
         </select>
         
         <label for="message">Tell me about your project</label>
-        <textarea id="message" name="Message" rows="4" placeholder="Describe your project idea... (mobile app, website, backend, design, etc.)" required></textarea>
+        <textarea id="message" name="Message" rows="4" placeholder="Describe your project idea... (mobile app, website, backend, design, flyer, logo, etc.)" required></textarea>
         
         <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
       </form>
@@ -1368,7 +1853,119 @@
   </footer>
 
   <script>
-    /* --- YOUR EXISTING SPA NAVIGATION --- */
+    /* --- PARTICLE BACKGROUND --- */
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (10 + Math.random() * 20) + 's';
+        particlesContainer.appendChild(particle);
+      }
+    }
+    createParticles();
+
+    /* --- TIME GREETING --- */
+    function setGreeting() {
+      const hour = new Date().getHours();
+      const greeting = document.getElementById('greeting');
+      let timeGreeting = '';
+      
+      if (hour < 12) {
+        timeGreeting = '☀️ Good Morning! Ready to create something?';
+      } else if (hour < 18) {
+        timeGreeting = '⛅ Good Afternoon! Let\'s build something great!';
+      } else {
+        timeGreeting = '🌙 Good Evening! Still coding and designing!';
+      }
+      
+      greeting.textContent = timeGreeting;
+    }
+    setGreeting();
+
+    /* --- TYPING ANIMATION --- */
+    const words = ['Mobile Apps', 'Websites', 'APIs', 'Beautiful Designs', 'Graphics', 'Full-Stack Solutions'];
+    let i = 0;
+    let j = 0;
+    let currentWord = '';
+    let isDeleting = false;
+    
+    function type() {
+      const typedElement = document.getElementById('typed-text');
+      if (!typedElement) return;
+      
+      currentWord = words[i];
+      if (isDeleting) {
+        typedElement.textContent = currentWord.substring(0, j-1);
+        j--;
+        if (j == 0) {
+          isDeleting = false;
+          i = (i + 1) % words.length;
+        }
+      } else {
+        typedElement.textContent = currentWord.substring(0, j+1);
+        j++;
+        if (j == currentWord.length) {
+          isDeleting = true;
+          setTimeout(type, 2000);
+          return;
+        }
+      }
+      setTimeout(type, isDeleting ? 50 : 100);
+    }
+    
+    setTimeout(type, 1000);
+
+    /* --- FUN FACTS --- */
+    const facts = [
+      "I can code and design better than I can cook! 🍳",
+      "My first line of code was 'Hello World' in 2020 🌍",
+      "I've worked with clients from 5 different countries 🌎",
+      "Coffee is my co-pilot ☕",
+      "I once fixed a bug in my dream 💭",
+      "I've designed over 100 flyers for Nigerian businesses!",
+      "My fastest background removal was 2 minutes ⚡",
+      "I love when clients say 'wow, this is exactly what I wanted!'",
+      "I can code in 5 programming languages 💻",
+      "Every project teaches me something new 📚"
+    ];
+    
+    function newFact() {
+      const random = Math.floor(Math.random() * facts.length);
+      document.getElementById('funFact').textContent = facts[random];
+    }
+    
+    newFact(); // Show first fact
+
+    /* --- DAILY QUOTE --- */
+    const quotes = [
+      "Design is not just what it looks like, it's how it works.",
+      "Code is poetry written in logic.",
+      "Every great project starts with a conversation.",
+      "I don't just write code, I build dreams.",
+      "Your vision + my skills = amazing results.",
+      "Creativity is intelligence having fun.",
+      "The details are not the details. They make the design.",
+      "Good design is good business."
+    ];
+    
+    const today = new Date().getDay();
+    document.getElementById('dailyQuote').textContent = quotes[today % quotes.length];
+
+    /* --- HEARTS ANIMATION --- */
+    const heartsContainer = document.getElementById('heartsContainer');
+    if (heartsContainer) {
+      for (let i = 0; i < 5; i++) {
+        const heart = document.createElement('i');
+        heart.className = 'fas fa-heart heart';
+        heart.style.animationDelay = i * 0.2 + 's';
+        heartsContainer.appendChild(heart);
+      }
+    }
+
+    /* --- NAVIGATION --- */
     function navigateTo(sectionId) {
       const sections = document.querySelectorAll('.page-section');
       sections.forEach(sec => sec.classList.remove('active'));
@@ -1393,19 +1990,19 @@
     }
 
     /* --- TESTIMONIAL CAROUSEL --- */
-    let current = 0;
-    const testimonials = document.querySelectorAll(".testimonial");
+    let currentCarousel = 0;
+    const carouselItems = document.querySelectorAll(".carousel-item");
     
     function showNextTestimonial() {
-      if (testimonials.length > 0) {
-        testimonials[current].classList.remove("active");
-        current = (current + 1) % testimonials.length;
-        testimonials[current].classList.add("active");
+      if (carouselItems.length > 0) {
+        carouselItems[currentCarousel].classList.remove("active");
+        currentCarousel = (currentCarousel + 1) % carouselItems.length;
+        carouselItems[currentCarousel].classList.add("active");
       }
     }
     
-    if (testimonials.length > 0) {
-      setInterval(showNextTestimonial, 4000);
+    if (carouselItems.length > 0) {
+      setInterval(showNextTestimonial, 5000);
     }
 
     /* --- BACK TO TOP --- */
@@ -1472,7 +2069,7 @@
           stats.forEach(stat => {
             const target = parseInt(stat.getAttribute('data-target'));
             let current = 0;
-            const increment = target / 50; // Smooth animation
+            const increment = target / 50;
             
             const timer = setInterval(() => {
               current += increment;
@@ -1494,6 +2091,9 @@
     if (statsSection) {
       statsObserver.observe(statsSection);
     }
+
+    /* --- UPDATE HAPPY CLIENTS COUNT (matches stats) --- */
+    document.getElementById('happyClients').textContent = '28';
 
     /* --- SMOOTH SCROLL FOR ANCHOR LINKS --- */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
