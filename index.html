@@ -946,6 +946,48 @@
       box-shadow: 0 0 25px rgba(0, 210, 255, 0.4); 
     }
 
+    /* --- NEW WEBSITE BUTTONS STYLES --- */
+    .website-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    
+    .website-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: linear-gradient(135deg, rgba(0,210,255,0.1), rgba(58,123,213,0.1));
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .website-btn i {
+      font-size: 1.3rem;
+      color: var(--primary-glow);
+    }
+    
+    .website-btn:hover {
+      background: linear-gradient(135deg, var(--primary-glow), var(--secondary-glow));
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.3);
+      border-color: transparent;
+    }
+    
+    .website-btn:hover i {
+      color: white;
+    }
+
     /* --- FAQ --- */
     .faq-item { 
       margin-bottom: 1.5rem;
@@ -1716,6 +1758,17 @@
         <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725151830.jpg" alt="Portfolio Image 4" loading="lazy" />
         <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725224116.jpg" alt="Portfolio Image 5" loading="lazy" />
         <img src="https://raw.githubusercontent.com/seb-creator01/My-first-website-/main/images/fotor-ai-20250725151423.jpg" alt="Portfolio Image 6" loading="lazy" />
+      </div>
+
+      <!-- NEW WEBSITE BUTTONS ADDED HERE -->
+      <h3>My Other Projects</h3>
+      <div class="website-buttons">
+        <a href="https://seb-creator01.github.io/One-website-/" class="website-btn" target="_self">
+          <i class="fas fa-globe"></i> Visit One Website
+        </a>
+        <a href="https://seb-creator01.github.io/SebastianHub" class="website-btn" target="_self">
+          <i class="fas fa-store"></i> Visit SebastianHub
+        </a>
       </div>
     </section>
 
